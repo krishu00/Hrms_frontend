@@ -1,0 +1,181 @@
+/* BulkCTCUpload.css */
+
+.bulk-ctc-wrapper {
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.bulk-ctc-step-container {
+  margin-top: 20px;
+}
+
+/* Form & Input Controls */
+.bulk-ctc-flex-row {
+  display: flex;
+  gap: 20px;
+  align-items: flex-end;
+  margin-bottom: 20px;
+}
+
+.bulk-ctc-input-group {
+  flex: 1;
+}
+
+.bulk-ctc-label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.bulk-ctc-select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #d1d5db;
+  outline: none;
+  font-family: inherit;
+}
+
+.bulk-ctc-select:focus {
+  border-color: #2563eb;
+}
+
+/* Upload Zone */
+.bulk-upload-zone {
+  padding: 20px;
+  border: 2px dashed #d1d5db;
+  border-radius: 6px;
+  background-color: #f9fafb;
+}
+
+.bulk-file-input {
+  margin-bottom: 15px;
+  display: block;
+}
+
+/* Buttons */
+.btn-bulk-secondary {
+  padding: 10px 20px;
+  background-color: #4b5563;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.btn-bulk-secondary:hover:not(:disabled) {
+  background-color: #374151;
+}
+
+.btn-bulk-primary {
+  padding: 10px 20px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.btn-bulk-primary:hover:not(:disabled) {
+  background-color: #1d4ed8;
+}
+
+.btn-bulk-success {
+  padding: 8px 16px;
+  background-color: #10b981;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.btn-bulk-success:hover:not(:disabled) {
+  background-color: #059669;
+}
+
+.btn-bulk-cancel {
+  padding: 8px 16px;
+  margin-right: 10px;
+  background-color: #e5e7eb;
+  color: #374151;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.btn-bulk-cancel:hover {
+  background-color: #d1d5db;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Preview Section */
+.preview-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.error-banner {
+  padding: 12px;
+  background-color: #fef2f2;
+  color: #b91c1c;
+  border: 1px solid #f87171;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+
+/* Table Styles */
+.bulk-table-wrapper {
+  overflow-x: auto;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+}
+
+.bulk-preview-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.bulk-preview-table thead {
+  background-color: #f3f4f6;
+}
+
+.bulk-preview-table th {
+  padding: 12px;
+  border-bottom: 1px solid #e5e7eb;
+  font-weight: 600;
+  color: #374151;
+  white-space: nowrap;
+}
+
+.bulk-preview-table td {
+  padding: 12px;
+  border-bottom: 1px solid #e5e7eb;
+  color: #4b5563;
+}
+
+.ctc-highlight {
+  font-weight: bold;
+  color: #111827;
+}
+
+.no-data-text {
+  padding: 20px;
+  text-align: center;
+  color: #6b7280;
+}

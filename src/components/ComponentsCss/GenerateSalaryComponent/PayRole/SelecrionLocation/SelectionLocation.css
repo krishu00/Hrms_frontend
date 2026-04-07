@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.selectionLocation_Outer {
+  /* border: 1px solid rgb(130, 129, 129); */
+  margin: 0px 10px 0px 10px;
+  height: 316px;
+}
+.input_selection {
+  display: flex;
+  margin: -18px 0px 0px 16px;
+}
+.input_selection p {
+  font-size: 12px;
+}
+.input_selection input {
+  width: 2%;
+}
+.input_selection_container {
+  margin-left: 40px;
+  margin-top: 5px;
+}
+.selectionLocation_Inner p {
+  font-size: 13px;
+  color: #333;
+  margin: 10px;
+}

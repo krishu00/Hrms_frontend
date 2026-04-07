@@ -1,0 +1,146 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+.outer-section-profile {
+  width: 100%;
+
+  border-radius: 10px;
+  display: flex;
+}
+.profile-icon_img {
+  font-size: 75px;
+  margin-right: 10px;
+  color: #84c7ae;
+}
+
+.profile-main-section {
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  width: 20%;
+  min-width: 150px;
+  height: auto;
+  margin: 5px;
+
+  border-radius: 10px;
+}
+.profile-user-name {
+  text-align: center;
+  padding: 13px;
+}
+.user-data-sections {
+  box-sizing: border-box;
+  width: 78%;
+
+  border-radius: 10px;
+  height: 480px;
+  min-height: 350px;
+  margin: 5px;
+}
+.circle-img-section {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  margin: auto;
+  margin-top: 10px;
+  z-index: 1;
+}
+.circle-img-section img {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+}
+
+.user-profile-data h3 {
+  color: rgb(107, 105, 105);
+  font-size: 1.4vw;
+}
+.span {
+  display: flex;
+  flex-direction: column;
+
+  font-size: 0.8rem;
+  margin-bottom: 12px;
+  margin-left: 20px;
+  width: 82%;
+  overflow: auto;
+  opacity: 70%;
+}
+.span::-webkit-scrollbar {
+  display: none;
+}
+.designation-value,
+.phone-value,
+.email-value,
+.department-value,
+.age-value,
+.manager-value {
+  color: #0d7c66;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+@media screen and (min-width: 768px) {
+  .outer-section-profile {
+    flex-direction: row;
+    align-items: center;
+    height: auto;
+  }
+
+  .profile-main-section {
+    width: 21%;
+  }
+
+  .user-data-sections {
+    width: 81%;
+  }
+
+  .user-profile-data h3 {
+    font-size: 0.8rem;
+  }
+
+  .span {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .outer-section-profile {
+    flex-direction: column; /* Stack sections vertically */
+  }
+
+  .profile-main-section {
+    width: 100%;
+    margin-bottom: 15px; /* Add space between stacked sections */
+  }
+
+  .user-data-sections {
+    width: 100%;
+    height: auto; /* IMPORTANT: Allow height to grow with content */
+    min-height: unset; /* Remove desktop min-height constraint */
+  }
+
+  .circle-img-section {
+    height: 77px;
+    width: 73px;
+    display: flex;
+  }
+
+  .user-profile-data h3 {
+    font-size: 1.3rem; /* Adjusted for better mobile readability */
+    margin-top: 24px;
+  }
+
+  .span {
+    font-size: 0.9rem;
+    width: 100%;
+    margin-left: 0; /* Reset left margin for full width */
+    padding: 0 15px; /* Add horizontal padding for spacing */
+  }
+  .profile-icon_img {
+    margin-right: 10px;
+  }
+  .user-profile-data {
+    margin-top: -10px;
+  }
+}

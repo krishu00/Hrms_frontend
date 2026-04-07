@@ -1,0 +1,280 @@
+.attendance-pivot-report-container {
+    width: 100%;
+   max-height: 360px;
+    overflow-x: auto; /* Enables horizontal scrolling for wide tables */
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+.attendance-pivot-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    font-size: 0.8em;
+    min-width: 800px; /* Ensure a minimum width to enable scrolling */
+}
+
+.attendance-pivot-table thead th {
+    background-color: #e4f0e4;
+        padding: 8px 8px;
+    text-align: center;
+    border: 1px solid #ddd;
+    white-space: nowrap; /* Keep headers on one line */
+    font-weight: bold;
+    position: sticky;
+    top: 0;
+    z-index: 40;
+}
+
+/* .fixed-column-header 
+.fixed-column-cell{
+    background-color: #e0e0e0; 
+    position: sticky;
+   
+    z-index: 10; 
+} */
+ .fixed-column-header,
+.fixed-column-cell {
+    position: sticky;
+    background-color: #f9f9f9;
+    z-index: 50;
+    border-right: 1px solid #ddd;
+    top:0;
+}
+.fixed-column-header{
+top:0 !important;
+position: sticky !important;
+z-index: 60 !important;
+}
+
+.date-group-header {
+    background-color: #b3e0ff; /* Light blue for date group headers */
+    color: #333;
+    position:sticky;
+    z-index: 80;
+    top: 0;
+}
+
+.date-header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.85em;
+    position : sticky;
+    z-index: 80;
+    top: 0;
+} 
+
+.day-name {
+    font-weight: normal;
+    font-size: 0.8em;
+    margin-top: 2px;
+}
+
+.punch-header {
+    background-color: #d9edf7; /* Lighter blue for In/Out headers */
+    font-weight: normal;
+    font-size: 0.8em;
+    padding: 6px 4px;
+    border-top: 1px solid #ddd;
+    top:45px !important;
+    position: sticky !important;
+    z-index: 40;
+}
+
+.attendance-pivot-table tbody td {
+    padding: 8px 5px;
+    border: 1px solid #eee;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap; /* Prevent wrapping in cells */
+}
+.attx-full-cell {
+    display: flex;
+    flex-direction: column;
+}
+.att-inout {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+}
+.pa-count{
+    font-weight: 600;
+    font-size: 0.9em;
+}
+
+/* .fixed-column-cell {
+    background-color: #f9f9f9;
+    position: sticky;
+    left: 0;
+    z-index: 8; 
+    border-right: 1px solid #ddd;
+    text-align: left;
+    padding-left: 10px;
+} */
+
+/* Status specific styling */
+.attendance-cell.status-absent {
+    background-color: #ffe0e0; /* Light red */
+    color: #c00;
+    font-weight: bold;
+}
+
+.attendance-cell.status-present {
+    background-color: #e0ffe0; /* Light green */
+    color: #0c0;
+}
+
+.attendance-cell.status-holiday {
+    background-color: #f0e0ff; /* Light purple */
+    color: #ad820d;
+}
+
+.attendance-cell.status-w-o { /* For Weekend Off */
+    background-color: #e6e6e6; /* Grey */
+    color: #555;
+    font-weight: bold;
+}
+
+.attendance-cell.status-missed-punch {
+    background-color: #fffacd; /* Lemon Chiffon */
+    color: #c08;
+    font-weight: bold;
+}
+   
+
+.editable-status-cell {
+  /* Light blue background to indicate editability */
+  cursor: pointer;
+}
+
+
+/* In your ComponentsCss/AdminPanel/ReportsComponent/AttendancePivotReport.css */
+
+.update-button-container {
+  position: sticky; /* Make it sticky to the bottom of its scrollable parent */
+  bottom: 0;
+  right: 0;
+  width: 100%; /* Or set a fixed width */
+  display: flex;
+  justify-content: flex-end; /* Align to bottom right */
+  padding: 15px;
+  background-color: #f0f0f0; /* Light background to make it stand out */
+  border-top: 1px solid #ddd;
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+  z-index: 1000; /* Ensure it's above other content */
+}
+
+.update-attendance-btn {
+  padding: 12px 25px;
+  font-size: 16px;
+  background-color: #007bff; /* Primary blue */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.update-attendance-btn:hover {
+  background-color: #0056b3;
+}
+
+.update-attendance-btn:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+
+
+.attendance-pivot-table th.fixed-column-header:nth-child(1),
+.attendance-pivot-table td.fixed-column-cell:nth-child(1) {
+  left: 0;
+  z-index: 50;
+    
+}
+
+.attendance-pivot-table th.fixed-column-header:nth-child(2),
+.attendance-pivot-table td.fixed-column-cell:nth-child(2) {
+  left: 78px;
+  z-index: 50;
+   
+}
+
+.attendance-pivot-table th.fixed-column-header:nth-child(3),
+.attendance-pivot-table td.fixed-column-cell:nth-child(3) {
+  left: 193px;
+  z-index: 50;
+    
+}
+
+.attendance-pivot-table th.fixed-column-header:nth-child(4),
+.attendance-pivot-table td.fixed-column-cell:nth-child(4) {
+  left: 292px;
+  z-index: 50;
+} 
+
+.present-absent-cell {
+    
+    font-weight: 600;
+}
+.pa-cell{
+  padding-bottom: 1px;
+}
+.present-cell {
+    color: green;
+}
+.absent-cell {
+    color: red;
+}
+.combined-punch-cell {
+  position: relative;
+  cursor: pointer;
+}
+
+.attx-full-cell {
+  position: relative;
+}
+
+/* Tooltip hidden by default */
+.attx-tooltip {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #333;
+  color: #fff;
+  font-size: 12px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+  z-index: 1000;
+}
+
+/* Arrow */
+.attx-tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 6px;
+  border-style: solid;
+  border-color: #333 transparent transparent transparent;
+}
+
+/* Show tooltip on hover */
+.combined-punch-cell:hover .attx-tooltip {
+  opacity: 1;
+}
+
+.attendance_bottom_user_pagin{
+    margin-left: 10px;
+}

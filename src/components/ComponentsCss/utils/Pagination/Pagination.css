@@ -1,0 +1,60 @@
+.pagination-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin: 7px 0;
+}
+
+.pagination-search {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid #ccc;
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+
+.pagination-search input {
+  border: none;
+  outline: none;
+}
+
+.pagination-info {
+  font-size: 14px;
+}
+
+.pagination-controls {
+  display: flex;
+  gap: 6px;
+}
+
+.pagination-controls button {
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  background: white;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.pagination-controls button.active {
+  background: #007bff;
+  color: white;
+}
+
+.pagination-controls button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.excel-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #1d6f42;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}

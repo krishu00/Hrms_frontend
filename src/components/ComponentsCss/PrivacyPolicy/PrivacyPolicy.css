@@ -1,0 +1,41 @@
+.privacy-container {
+  font-family: Arial, sans-serif;
+  line-height: 1.7;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 900px;
+  margin: auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.privacy-hero {
+  background: url('../../../Image/PrivacyPolicy.png') no-repeat center;
+  background-size: cover;
+  padding: 40px 20px;
+  color: #fff;
+  text-align: center;
+}
+
+.privacy-hero h1 {
+  font-size: 2.5em;
+  margin-bottom: 5px;
+}
+
+.breadcrumb {
+  font-size: 0.9em;
+  color: #ddd;
+}
+
+.privacy-content h2, .privacy-content h3 {
+  margin-top: 30px;
+  color: #333;
+}
+
+.privacy-content ul {
+  list-style: disc;
+  margin-left: 20px;
+}
+
+.privacy-content p, .privacy-content li {
+  color: #444;
+}

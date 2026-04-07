@@ -1,0 +1,15 @@
+.global-btn {
+  background-color: rgb(132, 199, 174);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s ease;
+}
+
+.global-btn:hover {
+  background-color: rgb(116, 197, 167);
+  box-shadow: 0 0 10px gray;
+}

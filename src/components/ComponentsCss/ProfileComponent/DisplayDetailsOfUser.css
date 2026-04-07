@@ -1,0 +1,244 @@
+/* Main Container */
+
+.outer-container-dispaly {
+  /* border: 1px solid rgb(202, 202, 202); */
+  /* width: 1400px; */
+  border-radius: 13px;
+  /* height: 70vh; */
+}
+.heading-display {
+  /* border: 1px solid black; */
+  margin: 5px;
+  height: 50px;
+  background-color: rgb(230 240 230 / 58%);
+}
+.heading-display h3 {
+  /* border: 1px solid black; */
+  padding: 12px;
+}
+.tracker-details-container {
+  display: flex;
+  gap: 5px;
+  /* border: 1px solid black; */
+}
+.tracker-data {
+  position: relative;
+  height: 310px;
+  width: 265px;
+  /* border: 2px solid black; */
+  /* margin: 20px; */
+  /* text-align: center; */
+}
+.tracker-data li {
+  /* background-color: #4caf97; */
+  display: flex;
+  font-size: small;
+  margin: 11px;
+  height: 26px;
+  width: 200px;
+  margin-left: 15px;
+}
+.lable-details {
+  font-size: 14px;
+  margin-left: 16px;
+  margin-top: 5px;
+}
+/* input[type="radio"] {
+  accent-color: rgb(214, 25, 25);
+} */
+
+.border-red-500 {
+  accent-color: rgb(214, 25, 25);
+}
+.border-gray-400 {
+  accent-color: gray;
+}
+.border-green-500 {
+  accent-color: rgb(66, 152, 66);
+}
+.input-radio {
+  /* position: absolute; */
+  width: 7%;
+  position: relative;
+  z-index: 2; /* Keeps the checkbox above the line */
+}
+p,
+label {
+  font: 1rem "Fira Sans", sans-serif;
+}
+
+/* input {
+  margin: 0.4rem;
+} */
+
+.input-radio::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 32px;
+  background: #dedede;
+  /* top: 7%; */
+  top: 23px;
+  left: 6px;
+  /* margin-left: 5px; */
+
+  z-index: 1;
+}
+/* Remove the line for the last checkbox */
+li:last-child .input-radio::after {
+  display: none;
+}
+
+.display-details-container {
+  padding: 20px;
+  /* border: 1px solid rgb(189, 188, 188); */
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(
+    to bottom,
+    rgba(193, 223, 196, 0) 0%,
+    rgba(222, 236, 221, 0.9647) 100%
+  );
+  border-radius: 25px;
+  width: 70%;
+  /* max-width: 800px; */
+  margin: 10px;
+  height: 346px;
+  /* border: 2px solid black; */
+}
+
+.tracker-details {
+  /* border: 1px solid rgb(202, 196, 196); */
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(
+    to bottom,
+    rgba(201, 222, 203, 0) 0%,
+    rgba(222, 236, 221, 0.9647) 100%
+  );
+  width: 30%;
+  height: 346px;
+  border-radius: 25px;
+  margin: 10px;
+}
+/* Header Section */
+.details-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.details-header h3 {
+  font-size: 1.8rem;
+  color: #555;
+  text-align: center;
+}
+.ContainerOfButton {
+  border: 2px solid black;
+  height: 50px;
+}
+
+/* Form Section */
+.details-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.details-form-row {
+  width: 100%;
+}
+
+/* Input Group */
+.details-input-group {
+  flex: 1 1 calc(50% - 10px); /* Adjust to fit two columns with spacing */
+  display: flex;
+  flex-direction: column;
+  margin-top: -30px;
+}
+
+.details-input-group label {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 0px;
+  position: relative;
+  width: fit-content;
+  background-color: transparent;
+  padding: 1px 10px;
+  /* border: 1.5px solid #80808087; */
+  border-bottom: none;
+  /* margin-left: 10px; */
+  border-radius: 6px;
+}
+
+.details-input-group input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.details-input-group input:focus {
+  border-color: #4caf97;
+  outline: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .details-input-group {
+    flex: 1 1 100%; /* Stack inputs vertically on smaller screens */
+  }
+}
+
+/*  */
+.user_lable {
+  display: block;
+}
+
+/* Button Container */
+
+.navigation-btn {
+  /* border: 1px solid black; */
+  float: right;
+  width: 65%;
+
+  display: flex;
+  justify-content: center;
+  /* gap: 250px; */
+  margin-bottom: 10px;
+}
+
+.previous-button {
+  /* background-color: #4caf97; */
+  padding: 8px 12px;
+  /* border: 1px solid rgb(200, 200, 200); */
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  color: #555;
+  border-radius: 5px;
+  width: auto;
+  margin-top: -2px;
+}
+
+.next-button {
+  /* background-color: #4caf97; */
+  padding: 12px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  color: #555;
+  border-radius: 5px;
+  margin-left: 100px;
+  width: 80px;
+  margin-top: -2px;
+}
+
+.editSaveBtn {
+  padding: 12px 17px;
+  border-radius: 5px;
+  position: relative;
+  display: flex;
+  left: 88%;
+  top: -59px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  color: #555;
+}
+
+/*  */

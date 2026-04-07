@@ -1,0 +1,121 @@
+.dashboard-container {
+  display: flex;
+  height: 85vh;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+}
+
+.sidebar-panel {
+  width: 25%;
+  /* background-color: #004d7a; */
+  color: #fff;
+  padding: 20px;
+  background-color: rgba(222, 236, 221, 0.9647);
+
+  transition: all 0.3s ease;
+  border-radius: 6px;
+  height: 494px;
+  color: #0d7c66;
+}
+
+.sidebar-title {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  border-bottom: 2px solid #ffffff33;
+  padding-bottom: 10px;
+}
+
+.report-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.report-item {
+  padding: 12px 16px;
+  margin-bottom: 8px;
+  background-color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.report-item:hover {
+  background-color: rgb(223, 219, 219);
+}
+
+.report-item.selected {
+  background-color: white;
+  font-weight: bold;
+}
+
+.content-panel {
+  width: 75%;
+  padding: 5px 15px;
+  background-color: #ffffff;
+  height: 500px;
+  overflow-y: auto;
+}
+
+.content-title {
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.custom-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.custom-table th,
+.custom-table td {
+  border: 1px solid #ccc;
+  padding: 12px 15px;
+  text-align: left;
+}
+
+.custom-table th {
+  background-color: #eeeeee;
+}
+
+.placeholder-text {
+  font-size: 1.2rem;
+  color: #888;
+  text-align: center;
+  margin-top: 50px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .dashboard-container {
+    display: flex;
+    height: 85vh;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9;
+  }
+  .sidebar-panel {
+    width: 25%;
+    /* background-color: #004d7a; */
+    color: #fff;
+    padding: 20px;
+    background-color: rgba(222, 236, 221, 0.9647);
+    transition: all 0.3s ease;
+    border-radius: 6px;
+    height: 494px;
+    color: #0d7c66;
+  }
+  .sidebar-title {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    border-bottom: 2px solid #ffffff33;
+    padding-bottom: 10px;
+  }
+  .report-list {
+    list-style-type: none;
+    padding: 0;
+  }
+}
+
+@media screen and (width: 1440px) {
+}

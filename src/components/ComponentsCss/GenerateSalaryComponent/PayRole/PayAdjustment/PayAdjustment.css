@@ -1,0 +1,442 @@
+/* --- EXISTING CSS (Keep your layout, just add these new parts) --- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.pay-adjustment-container {
+  padding: 4px 15px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  margin: 0px 10px 0px 10px;
+}
+
+/* --- CONTROLS --- */
+.controls-pay-adjustment {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.search-input {
+  flex-grow: 1;
+  max-width: 17vw;
+  border: 1px solid #c4c3c3;
+  height: 30px;
+  border-radius: 6px;
+  padding: 8px;
+}
+
+.filter-select {
+  width: 15vw;
+  border: 1px solid #c4c3c3;
+  height: 30px;
+  border-radius: 6px;
+  padding: 0 8px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.table-container__pay_adjustment {
+  border: 1px solid rgb(122, 122, 122);
+  border-radius: 8px;
+  background-color: white;
+ max-height: 250px;
+  overflow-y: auto; 
+  overflow-x: hidden;
+  position: relative; 
+}
+
+.attendance-table__pay_adjustment {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+}
+
+.attendance-table__pay_adjustment th {
+  color: #333;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 11px; /* Slightly larger for readability */
+  padding: 10px;
+  border: 1px solid #e0e0e0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.attendance-table__pay_adjustment td {
+  border: 1px solid #e0e0e0;
+  padding: 4px 10px;
+  text-align: center;
+  font-size: 12px;
+  color: #444;
+}
+
+.attendance-table__pay_adjustment tbody tr:hover {
+  background-color: #f1f8ff;
+}
+
+.attendance-table__pay_adjustment tbody tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
+.no-data-cell {
+  padding: 40px !important;
+  color: #888;
+  font-style: italic;
+  background-color: white;
+}
+
+/* --- ACTION BUTTONS --- */
+.actions-cell {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+.action-button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 11px;
+  color: white;
+  transition: opacity 0.2s;
+}
+
+.view-button {
+  background-color: #17a2b8;
+}
+
+.edit-button {
+  background-color: #ffc107;
+  color: #212529; /* Dark text for yellow button */
+}
+
+.action-button:hover {
+  opacity: 0.9;
+}
+
+/* --- NEW: ADJUSTMENT BADGES (The pills in the table) --- */
+.adj-badge {
+  display: inline-block;
+  background-color: #e3f2fd;
+  color: #0d47a1;
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-size: 11px;
+  margin: 2px;
+  border: 1px solid #bbdefb;
+  white-space: nowrap;
+}
+
+/* --- POPUP STYLES --- */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1050;
+  backdrop-filter: blur(2px);
+}
+
+.popup-content.large-popup {
+  background: white;
+  width: 700px;
+  max-width: 95%;
+  max-height: 90vh;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.popup-header {
+  padding: 15px 20px;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f8f9fa;
+  border-radius: 8px 8px 0 0;
+}
+
+.popup-header h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.close-popup-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #aaa;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.close-popup-btn:hover {
+  color: #333;
+}
+
+.popup-body-scrollable {
+  padding: 20px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+/* --- NEW: Manual Input Fields in Popup --- */
+.adj-input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  text-align: right; /* Numbers aligned right */
+  font-family: "Consolas", monospace; /* Monospace for numbers */
+}
+
+.adj-input:focus {
+  outline: none;
+  border-color: #80bdff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* --- UPLOAD SECTION --- */
+.upload-section {
+  margin-top: 14px;
+  padding: 19px;
+  border: 2px dashed #ced4da;
+  border-radius: 8px;
+  text-align: center;
+  background-color: #f8f9fa;
+}
+
+.upload-section label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: #555;
+}
+
+/* --- FOOTER --- */
+.popup-footer {
+  padding: 5px 20px;
+  border-top: 1px solid #eee;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  background-color: #fcfcfc;
+  border-radius: 0 0 8px 8px;
+}
+
+.right-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.secondary-btn {
+  background: #fff;
+  border: 1px solid #6c757d;
+  color: #6c757d;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.secondary-btn:hover {
+  background-color: #e9ecef;
+}
+
+.primary-btn,
+.primary-btn_adjustment {
+  padding: 13px 14px;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  background-color: rgb(116, 197, 167);
+  gap: 12px;
+  height: 33px;
+  width: 84px;
+  /* margin-top: 20px; */
+}
+
+.primary-btn:hover,
+.primary-btn_adjustment:hover {
+  background-color: rgb(100, 168, 143);
+  color: white;
+}
+
+.primary-btn:disabled,
+.primary-btn_adjustment:disabled {
+  /* background-color: #94d3a2; */
+  cursor: not-allowed;
+}
+
+.cancel-btn {
+  background: #6c757d;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.cancel-btn:hover {
+  background-color: #5a6268;
+}
+
+/* --- INSTRUCTIONS --- */
+.instruction-section {
+  border-bottom: 1px solid gray;
+  padding: 5px 20px;
+}
+.instruction-section h4 {
+  margin-top: 0;
+  color: #0056b3;
+  font-size: 16px;
+}
+.instruction-section p {
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 15px;
+}
+.instruction-section h5 {
+  margin: 0px 0 10px;
+  color: #333;
+  font-size: 14px;
+}
+
+.instruction-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  margin-bottom: 15px;
+  border: 1px solid #dee2e6;
+}
+
+.instruction-table th {
+  background-color: #f8f9fa;
+  font-weight: 600;
+}
+.instruction-table th,
+.instruction-table td {
+  border: 1px solid #dee2e6;
+  padding: 8px;
+  text-align: left;
+}
+
+.note-section {
+  background-color: #fff3cd;
+  border: 1px solid #ffeeba;
+  color: #856404;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 13px;
+}
+.note-section ul {
+  padding-left: 20px;
+  margin: 0;
+}
+.note-section li {
+  margin-bottom: 3px;
+  text-align: start;
+}
+
+.search-wrapper {
+  position: relative;
+  /* width: 320px; */
+}
+
+.suggestion-box {
+  position: absolute;
+  top: 45px;
+  width: 230px;
+  background: rgb(242, 239, 239);
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  z-index: 999;
+  max-height: 250px;
+  overflow-y: auto;
+}
+
+.suggestion-item {
+  padding: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+}
+
+.suggestion-item:hover {
+  background: #f5f5f5;
+}
+
+.emp-name {
+  font-size: 14px;
+  margin-left: 10px;
+  color: #666;
+}
+
+.search-input-container {
+  /* position: relative; */
+  display: flex;
+  flex-direction: column;
+  /* width: ; */
+}
+
+.clear-search {
+  position: absolute;
+  right: 10px;
+  top: 7px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #888;
+}
+
+.clear-search:hover {
+  color: #d32f2f;
+}
+
+.final-save-container {
+  position: sticky;
+  bottom: 0;
+
+  display: flex;
+  justify-content: flex-end;
+
+  padding: 10px;
+  /* background: white; */
+  /* border-top: 1px solid #eee; */
+}

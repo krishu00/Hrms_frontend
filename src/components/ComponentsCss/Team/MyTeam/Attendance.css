@@ -1,0 +1,470 @@
+/* ====================== BASIC RESET ====================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.attx-container {
+  width: auto;
+  height: 480px;
+  border: 1px solid rgb(228, 227, 227);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.attx-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-bottom: 10px;
+  width: 100%;
+  border-bottom: 1px solid #dcd4d4;
+}
+
+.attx-header h2 {
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 24px;
+  font-weight: bold;
+  padding-top: 10px;
+}
+.attx-subheader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  width: 100%;
+}
+
+/* ====================== TABLE CONTAINER ====================== */
+.attx-main {
+  height: 400px;
+  /* margin-top: -13px; */
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+.attx-table-wrap {
+  flex: 1;
+  margin: 15px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-height: 356px;
+  background: #fff;
+}
+
+/* optional: scrollbar smoothness */
+.attx-table-wrap::-webkit-scrollbar {
+  width: 6px;
+}
+.attx-table-wrap::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 10px;
+}
+
+/* ====================== TABLE ====================== */
+.attx-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  min-width: 680px;
+}
+
+/* ✅ fixed selector + compact padding */
+.attx-table th,
+.attx-table td {
+  padding: 3px 4px;
+  text-align: center;
+  border: 1px solid #ddd;
+  font-weight: 600;
+  white-space: nowrap;
+  line-height: 1.2;
+}
+
+.attx-table th {
+  background-color: #deecdd;
+  position: sticky;
+  top: 0;
+  font-size: 12px;
+  font-weight: bold;
+  z-index: 2;
+}
+
+.attx-table tbody tr:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+
+/* S.No column narrow */
+.attx-sno {
+  width: 6%;
+}
+
+/* Employee details */
+.attx-emp-name {
+  font-weight: 600;
+}
+
+.attx-emp-id {
+  font-size: 11px;
+  color: gray;
+  margin-top: 2px;
+  margin-left: 20px;
+}
+.line1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+/* ====================== DAY CELL ====================== */
+.attx-day-cell {
+  display: flex;
+  gap: 4px;
+  
+}
+.totalhrs{
+  padding-top: 2px;
+}
+.attx-day {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px; /* kam gap */
+  padding: 2px 0; /* kam padding */
+  min-height: 38px; /* row height kam */
+}
+
+.attx-inout {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 1px 6px; /* compact box */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 10px; /* thoda small */
+  background: #fff;
+}
+
+.attx-in {
+  color: green;
+  font-weight: 600;
+}
+
+.attx-out {
+  color: green;
+  font-weight: 600;
+}
+.attx-working-hours {
+  font-size: 10px;
+  font-weight: 600;
+  color: red;
+   border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 2px;
+  background: #fff;
+}
+.attx-divider {
+  opacity: 0.6;
+}
+
+/* location icon */
+.attx-location {
+  font-size: 12px;
+  color: #555;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.attx-location:hover {
+  color: #1a8f6c;
+  transform: scale(1.2);
+}
+
+/* no data */
+.attx-nodata {
+  color: #999;
+  font-size: 12px;
+}
+
+/* ====================== POPUP ====================== */
+.attx-popup {
+  width: 300px;
+  min-height: 380px;
+  background: linear-gradient(rgb(248, 248, 248), rgb(216, 229, 214));
+  border-left: 2px solid #c5d8c4;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  padding: 15px 20px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: attx-slideInCenter 0.9s ease;
+  z-index: 1000;
+}
+
+/* popup header */
+.attx-popup-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1.5px solid #ccc;
+  padding-bottom: 6px;
+}
+
+.attx-popup-header h3 {
+  font-size: 17px;
+  text-align: center;
+  color: cadetblue;
+  font-weight: 600;
+}
+
+.attx-popup-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 22px;
+  color: #666;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.attx-popup-close:hover {
+  color: red;
+}
+
+/* popup content */
+.attx-popup-content ul {
+  list-style: none;
+  margin-top: 10px;
+  padding-left: 5px;
+}
+
+.attx-popup-content li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+  font-size: 13px;
+  color: #444;
+}
+
+.attx-popup-content a {
+  color: #1d7e68;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.attx-popup-content a:hover {
+  text-decoration: underline;
+}
+
+/* animation — right se slide hote hue center tak */
+@keyframes attx-slideInCenter {
+  from {
+    transform: translate(50%, -50%);
+    opacity: 0;
+  }
+  to {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+}
+
+/* ====================== RESPONSIVE ====================== */
+@media screen and (max-width: 1024px) {
+  .attx-main {
+    flex-direction: column;
+  }
+
+  .attx-popup {
+    width: 100%;
+    border-radius: 0 0 10px 10px;
+    margin-top: 10px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .attx-table th,
+  .attx-table td {
+    font-size: 8px;
+    padding: 3px;
+  }
+
+  .attx-popup-content li {
+    font-size: 12px;
+  }
+}
+
+.attx-verify {
+  font-size: 11px;
+  color: #1a8f6c;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.attx-verify:hover {
+  text-decoration: underline;
+  color: #0e5f4a;
+}
+
+.attx-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(128, 128, 128, 0.5);
+  z-index: 999;
+}
+
+.attx-filter {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+  margin: 10px 20px;
+}
+
+.attx-filter label {
+  margin-bottom: 1px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #444;
+}
+
+.attx-filter input {
+  width: 230px;
+  padding: 7px 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 13px;
+  outline: none;
+  transition: 0.2s;
+}
+
+.attx-filter input:focus {
+  border-color: #1a8f6c;
+  box-shadow: 0 0 4px rgba(26, 143, 108, 0.3);
+}
+
+.attx-popup-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.attx-popup-list li {
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+/* Make in/out location on one line */
+.attx-inline {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.attx-inline strong {
+  width: 120px; /* fixed width for label alignment */
+  flex-shrink: 0;
+}
+
+.attx-inline span {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #333;
+}
+
+.attx-scroll-text {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 150px;
+  vertical-align: middle;
+  position: relative;
+  cursor: pointer;
+  color: #0077cc;
+  font-size: 13px;
+}
+
+.attx-scroll-text:hover::after {
+  content: attr(title);
+  position: absolute;
+  top: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  color: #333;
+  font-size: 11px;
+  padding: 6px 8px;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  white-space: normal;
+  width: 150px;
+  z-index: 999;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.attx-scroll-text:hover {
+  color: #005fa3;
+}
+
+.attx-address-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  margin-left: 5px;
+}
+
+.attx-table-wrap {
+  overflow-x: auto;
+}
+
+.attx-search-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-right: 10px;
+}
+
+.attx-date-input {
+  width: 130px;
+  padding: 6px 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 13px;
+}
+
+.attx-search-button {
+  padding: 6px 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background: white;
+  cursor: pointer;
+}
+.attx-search-input {
+  padding: 6px, 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 220px;
+  margin-left: 12px;
+}

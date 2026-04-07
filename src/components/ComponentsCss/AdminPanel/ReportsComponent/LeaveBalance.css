@@ -1,0 +1,135 @@
+.leave-report-containers {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 25px;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  max-width: 950px;
+  position: relative;
+  height: 100%;
+  overflow: scroll;
+}
+
+.leave-report-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 0px;
+  margin-top: -24px;
+}
+
+.info-text {
+  font-size: 14px;
+  background-color: #f4f4f4;
+  padding: 10px;
+  border-left: 4px solid #ffc107;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.leave-report-form {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.form_section {
+  flex: 1;
+  min-width: 250px;
+}
+
+.form_section label {
+  display: block;
+  margin-bottom: 5px;
+  /* font-size: 14px; */
+}
+
+.form_section select {
+  width: 100%;
+  padding: 7px;
+  margin-top: 2px;
+}
+
+.required {
+  color: red;
+  margin-right: 5px;
+}
+.leave_checkbox_section {
+  display: flex;
+
+  gap: 10px;
+  height: 28px;
+  margin-left: 0px;
+  width: 44%;
+  /* border: 1px solid black; */
+}
+.leave_checkbox_section label {
+  width: 500px;
+  /* border: 1px solid black; */
+  margin-top: 7px;
+  height: 26px;
+}
+.checkbox-wrapper {
+  margin-top: 10px;
+  font-size: 14px;
+}
+.all_employe_check {
+  margin-top: 10px;
+  width: 14%;
+}
+
+.leave-types {
+  flex: 1;
+  min-width: 250px;
+  width: 100%;
+}
+
+.leave-types table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 28px;
+  cursor: pointer;
+}
+
+.leave-types th,
+.leave-types td {
+  padding: 8px 10px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+.input_leave_balence {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: "Karla", sans-serif;
+  cursor: pointer;
+}
+.leave-types tbody tr:nth-child(odd) {
+  /* border: 1px solid #000; */
+  background-color: #f2eeee37;
+}
+
+.view_button_of_balence {
+  margin-top: 10px;
+}
+
+.report-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.Download-button {
+  /* padding: 8px 20px;
+  background-color: #e5e0dd; */
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+}

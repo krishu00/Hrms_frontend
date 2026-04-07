@@ -1,0 +1,276 @@
+
+/* Reset and font */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.leave_temp_outer {
+  width: 100%;
+  min-height: 450px;
+  border: 1px solid #e6e4e4;
+  border-radius: 8px;
+  background-color: #fafafa;
+  padding: 15px;
+}
+
+.leave_create_head h3 {
+  font-size: 20px;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.leave_template_name {
+  margin: 0px 14px;
+  display: flex;
+  gap: 30px;
+}
+
+.leave_template_name h4 {
+  display: inline-block;
+  font-size: 16px;
+  color: #34495e;
+  margin-right: 10px;
+}
+
+.leave_template_name input {
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 250px;
+  font-size: 14px;
+}
+
+.leave_comp_outer {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  flex-wrap: wrap;
+  border: 1px solid #dbdbdb;
+  border-radius: 8px;
+  padding: 20px;
+  background-color: #ffffff;
+}
+
+.leave_comp_table {
+  border: 1px solid #b5b5b5;
+  border-radius: 8px;
+  width: 45%;
+  max-height: 300px;
+  overflow-y: auto;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.leave_comp_table::-webkit-scrollbar {
+  width: 6px;
+}
+
+.leave_comp_table::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 3px;
+}
+
+.leave_comp_table table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 5px;
+}
+
+.leave_comp_table th {
+  background-color: #deecdd;
+  position: sticky;
+  top: 0;
+  text-align: center;
+  padding: 10px;
+  font-size: 14px;
+  color: #2c3e50;
+  border-bottom: 1px solid #ccc;
+}
+
+/* First column = Leave (90%) | Second column = Remove (10%) */
+.leave_comp_table th:nth-child(1),
+.leave_comp_table td:nth-child(1) {
+  width: 90%;
+  text-align: center;
+}
+
+.leave_comp_table th:nth-child(2),
+.leave_comp_table td:nth-child(2) {
+  width: 15%;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.leave_comp_table tbody tr {
+  transition: background-color 0.2s ease;
+}
+
+.leave_comp_table tbody tr:nth-child(odd) {
+  background-color: #f4f4f4;
+}
+
+.leave_comp_table td {
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 13px;
+  text-align: center;
+  padding: 8px;
+  vertical-align: middle;
+}
+
+.leave_comp_table button {
+  cursor: pointer;
+  padding: 4px 10px;
+  font-size: 11px;
+  border: none;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+  color: #df3232;
+}
+
+.leave_comp_table button:hover {
+  background-color: #d3dbe0;
+}
+
+.leave_comp_table button.remove-btn {
+  background-color: #e74c3c;
+}
+
+.leave_comp_table button.remove-btn:hover {
+  background-color: #c0392b;
+}
+
+.leave_back_btn_container {
+  display: flex;
+  margin-top: -9px;
+  gap: 5px;
+}
+
+.leave_back_btn_container button {
+  cursor: pointer;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.leave_back_btn_container button:hover {
+  background-color: #e2e8ea;
+}
+
+.leave_submit_btn {
+  background-color: #74c5a7;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.leave_submit_btn:hover {
+  background-color: #74c5a7c4;
+}
+
+.leave_comp_table {
+  border: 1px solid #b5b5b5;
+  border-radius: 8px;
+  width: 45%;
+  height: 300px; /* Fixed height */
+  overflow: hidden;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+}
+
+.leave_comp_table thead {
+  flex: 0 0 auto;
+}
+
+.leave_comp_table tbody {
+  flex: 1 1 auto;
+  overflow-y: auto;
+  display: block;
+}
+
+.leave_comp_table tbody tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.leave_comp_table thead tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.leave_comp_table::-webkit-scrollbar {
+  width: 6px;
+}
+
+.leave_comp_table::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 3px;
+}
+
+.temp_back_btn_container {
+  margin-top: 10px;
+}
+
+
+
+
+
+
+/* leaves template css */
+
+
+.leave-template-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  font-size: 14px;
+  background-color: #f9f9f9;
+}
+
+.leave-template-table th,
+.leave-template-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+.leave-template-table th {
+  background-color: #e6f4ea;
+  color: #2d6a4f;
+  font-weight: 600;
+}
+
+/* Equal width for name, description, leaves */
+.leave-col {
+  width: 25%;
+}
+
+/* Narrower column for actions */
+.leave-action-col {
+  width: 15%;
+}
+
+/* Style buttons inside actions */
+.leave-actions button {
+  margin-right: 5px;
+  padding: 5px 8px;
+  font-size: 12px;
+  background-color: #eef0f2;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.leave-actions button:hover {
+  background-color: #d5e0e5;
+}

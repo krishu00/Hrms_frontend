@@ -1,0 +1,78 @@
+/* Apply box-sizing globally to prevent padding from increasing width */
+* {
+  box-sizing: border-box;
+}
+
+.teams-layout {
+  display: flex;
+  width: 100%;       /* Ensure full width */
+  height: 100vh;     /* Use full viewport height or fit to container */
+  overflow: hidden;  /* Prevent scrollbars on the main layout */
+}
+
+.teams-menu {
+  width: 20%;        /* Target width */
+  min-width: 200px;  /* Stop it from getting unreadably small */
+  max-width: 300px;  /* Optional: Stop it from getting too big */
+  flex-shrink: 0;    /* 👈 CRITICAL: Prevents the menu from being squashed by the table */
+  
+  border-right: 1px solid #ddd;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  height: 100%;      /* Fill parent height */
+}
+
+.teams-content {
+  flex: 1;           /* Take up all remaining space */
+  /* width: 80%;     <-- REMOVE THIS. flex: 1 handles the width automatically */
+  
+  padding: 1rem;
+  background-color: #ffffff;
+  margin: 0;         /* Clean up margins */
+  height: 100%;      
+  
+  overflow-x: auto;  /* 👈 CRITICAL: If the table is wide, scroll INSIDE this box, don't stretch the layout */
+  overflow-y: auto;  /* Allow vertical scrolling if needed */
+}
+
+/* ... Keep your existing Table Styles below ... */
+
+.teams-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #4caf50;
+  margin-bottom: 20px;
+}
+
+.teams-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+}
+
+.teams-header {
+  text-align: left;
+  background-color: #dff0d8;
+  color: #333333;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.teams-cell {
+  padding: 10px;
+  border-bottom: 1px solid #cccccc;
+  color: #333333;
+  text-align: left;
+}
+
+.teams-cell:hover {
+  background-color: #f2f2f2;
+  cursor: pointer;
+}
+
+.team-content-placeholder {
+  font-size: 18px;
+  color: #666;
+  text-align: center;
+  margin-top: 50px;
+}

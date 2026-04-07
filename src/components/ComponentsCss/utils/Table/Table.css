@@ -1,0 +1,34 @@
+.templates-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 0.5rem;
+  }
+  
+  .templates-table th,
+  .templates-table td {
+    padding: 1rem;
+    text-align: left;
+  }
+  
+  .templates-table th {
+    background: #e6f2ff;
+    color: #0056b3;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  
+  .templates-table td {
+    background: white;
+  }
+  
+  .templates-table tr {
+    transition: all 0.2s ease;
+  }
+  
+  .templates-table tr:hover td {
+    background: #f0f8ff;
+  }
+  
+  
+  
+  

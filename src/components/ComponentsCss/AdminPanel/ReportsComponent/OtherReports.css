@@ -1,0 +1,17 @@
+.add-form{
+    display: flex;
+    flex-direction: column;
+    width:50%;
+    gap:5px;
+}
+.add-form-buttons{
+    display: flex;
+    margin-top:10px;
+    gap:10px;
+    width:50%;
+    justify-content:center;
+}
+.dlt{
+    background: #ff4d4f;
+    color: white;
+}

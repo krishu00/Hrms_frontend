@@ -1,0 +1,195 @@
+
+.leaves-attendance-container {
+  padding: 0px 15px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  margin: 4px; /* Match margin from SelectionLocation_Outer */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.page-description {
+  font-size: 13px;
+  color: #333;
+  /* margin-bottom: 15px;
+}
+
+.controls-section {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+  align-items: center;
+  flex-wrap: wrap; /* Allow controls to wrap on smaller screens */
+}
+
+.search-input {
+  flex-grow: 1;
+  max-width: 350px;
+}
+
+/* .filter-select {
+  min-width: 200px;
+  background-color: white; 
+} */
+.table-responsive-wrapper {
+  overflow-x: auto; /* Enables horizontal scrolling for the table on small screens */
+  width: 100%;
+}
+.attendance-table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  width: 100%;
+  /* border-collapse: separate; */
+  border-spacing: 0 5px;
+  /* margin-top: -22px; */ /* Removed this problematic line */
+  border: 1px solid #d9e3d9;
+}
+
+.attendance-table td {
+    border: 1px solid #e0e0e0;
+    padding: 8px 8px;
+    text-align: center;
+    font-size: 10px;
+    font-weight: 400;
+    margin-top: 4px;
+}
+
+.attendance-table th {
+  border: 1px solid #e0e0e0;
+  padding: 6px 14px;
+  text-align: center;
+  font-size: 10px;
+  margin-top: 4px;
+  background-color: #c5cad1;
+  color: black;
+  font-weight: 600;
+  text-transform: uppercase;
+ 
+}
+
+
+.attendance-table tbody tr:nth-child(even) {
+  background-color: #f8f8f8;
+}
+
+.attendance-table tbody tr:hover {
+  background-color: #e9eff5;
+}
+
+.actions-cell {
+  text-align: center; /* Center buttons in the actions cell */
+  /* display: flex; */
+}
+
+.action-button {
+     padding: 2px 4px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 10px;
+    margin: 0px 4px;
+    color: white;
+    transition: background-color 0.2s ease;
+    background-color: #9da4ab;
+}
+.action-button:hover{
+   background-color: #6d6e6fcf;
+   
+}
+
+
+.no-data-cell {
+  text-align: center;
+  padding: 20px;
+  color: #777;
+  font-style: italic;
+}
+.table-container__attendance {
+  border: 1px solid rgb(122, 122, 122);
+  border-radius: 8px;
+
+  overflow: scroll;
+  height: 228px;
+}
+.controls-section {
+  display: flex;
+  /* gap: 327px; */
+}
+.controls-section input {
+  /* width: 20%; */
+  max-width: 18vw;
+  border: 1px solid #c4c3c3;
+  height: 24px;
+  border-radius: 6px;
+  margin: 6px;
+  padding: 8px;
+}
+.controls-section select {
+  width: 28%;
+  border: 1px solid #c4c3c3;
+  height: 24px;
+  border-radius: 6px;
+  padding: 1px;
+  margin-top: 6px;
+}
+.controls-section select option{
+  padding: 0px;
+}
+/* Responsive Adjustments */
+
+/* Tablet - 768px */
+@media (max-width: 1024px) {
+  .controls-section {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  /* .search-input,
+  .filter-select {
+    width: 100%;
+    max-width: none;
+    margin-bottom: 10px;
+  } */
+
+  /* .filter-select {
+    padding: 8px;
+    margin-top: 4px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  } */
+
+  .attendance-table th,
+  .attendance-table td {
+    padding: 8px 10px;
+    font-size: 13px;
+  }
+
+  .action-button {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+}
+
+/* Mobile - up to 767px */
+@media (max-width: 767px) {
+  .leaves-attendance-container {
+    padding: 10px;
+    margin: 5px;
+  }
+
+  .page-description {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .leaves-attendance-container {
+    /* Example: Increase padding for larger screens if desired */
+    /* padding: 25px; */
+  }
+  .search-input {
+    max-width: 450px; /* Allow search input to be a bit wider */
+  }
+}

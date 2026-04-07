@@ -1,0 +1,392 @@
+.RequestCard-div {
+  background: linear-gradient(to bottom, #ffffff -8%, #e0ece0 59%, #ddebdd 0%);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  width: 80%;
+  margin: 20px auto;
+  font-family: fira-sans, sans-serif;
+  border: 1px solid #e0e0e0;
+}
+
+.RequestCard-title {
+  margin-top: 0;
+  color: #0d7c66;
+  text-align: center;
+  font-weight: bold;
+  font-size: 22px;
+  text-transform: uppercase;
+}
+
+.raised-by-box {
+  border-radius: 5px;
+  align-items: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user-info {
+  display: flex;
+  align-items: left;
+}
+
+.user-icon {
+  font-size: 40px;
+  color: #555;
+  margin-right: 10px;
+}
+
+.user-details p {
+  margin: 0;
+}
+
+.user-name {
+  font-weight: bold;
+}
+
+.status {
+  color: green;
+  font-weight: bold;
+}
+
+.name-status-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.name,
+.status {
+  display: flex;
+  flex-direction: column;
+}
+
+.name p,
+.status p {
+  margin: 0;
+}
+
+.user-status {
+  color: green;
+  font-weight: bold;
+}
+
+.box {
+  border: 1px solid #e0e0e0;
+  padding: 4px 15px;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  margin-bottom: 7px;
+}
+
+.box-title {
+  margin-top: 0;
+  font-weight: bold;
+  color: #666;
+  align-self: flex-start;
+}
+.reason_of_leave {
+  padding: 10px 0px;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 200px;
+  overflow-y: scroll;
+}
+
+.insideContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.leaves-box,
+.applied-dates-box,
+.approvers-box {
+  display: flex;
+  flex-direction: column;
+}
+.applied-dates-box p{
+  margin-left: 10px;
+}
+.applied-dates-box p,
+.leaves-box p,
+.reasons-box p {
+  align-items: left;
+  font-size: 13px;
+}
+
+.remark-input {
+  margin: 5px;
+}
+.applied_date_table_header {
+  font-size: 13px;
+}
+.box-reason {
+  width: 100%;
+}
+
+.reasons-box {
+  display: flex;
+  gap: 10px;
+  padding: 5px;
+}
+
+.leaves-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.leave-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.actions button {
+  padding: 8px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  flex: 1;
+  margin: 0 5px;
+}
+
+.actions .approve {
+  background-color: #84c7ae;
+  color: #fff;
+}
+
+.actions .rejectBtn {
+  background: linear-gradient(#f53b3b 81%, transparent 19%);
+  color: #fff;
+}
+.approve.loading{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+   background: linear-gradient(#f53b3b 81%, transparent 19%);
+  .rejectBtn{
+    opacity: 0%;
+  }
+}
+.approvers-box {
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+
+.approvers-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 450px;
+}
+
+.approvers-table th,
+.approvers-table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  white-space: nowrap;
+}
+
+.approvers-table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.status-box {
+  margin: 0;
+}
+
+.table-common {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.table-common th,
+.table-common td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.table-common th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+  text-align: center;
+  font-size: 13px;
+}
+
+.table-common tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.table-common tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+.applied-dates-table .applied_date_table_header th {
+  background-color: #f4f4f4;
+}
+
+/* .leaves-box {
+  font-size: 13px;
+} */
+
+.small-text {
+  font-size: 14px;
+  color: #555;
+}
+
+.box-title {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 4px;
+  margin-left: 10px;
+}
+
+/* .reasons-box {
+  margin-top: 20px;
+} */
+
+.box-reason {
+  padding: 10px;
+  margin: 5px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+}
+
+.actions {
+  margin-top: 1px;
+  display: flex;
+  gap: 10px;
+}
+
+.approve {
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.reject {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.approve:hover,
+.reject:hover {
+  opacity: 0.9;
+}
+
+.approver_status {
+  color: #84c7ae;
+  font-size: 14px;
+  padding: 5px 10px ;
+  margin: 0;
+}
+.approver_status_head {
+  color: #000;
+  font-size: 13px;
+  opacity: 50%;
+}
+.approver_status_heading{
+  color:  #0d7c66; 
+}
+
+.reason-col{
+ text-align:left;
+ padding: 0px 2px;
+ color:#444444
+}
+
+@media (max-width: 600px) {
+
+  .RequestCard-div {
+    width: 95%;
+    padding: 12px;
+    margin: 10px auto;
+  }
+
+  .RequestCard-title {
+    font-size: 16px;
+  }
+
+  .raised-by-box,
+  .name-status-row,
+  .insideContainer,
+  .leaves-container,
+  .leave-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .user-icon {
+    font-size: 30px;
+  }
+
+  .user-details p,
+  .small-text,
+  .applied-dates-box p,
+  .leaves-box p,
+  .reasons-box p {
+    font-size: 12px;
+  }
+
+  .container {
+    height: auto;
+    max-height: 250px;
+  }
+
+  .approvers-box {
+    overflow-x: auto;
+  }
+
+  .approvers-table {
+    min-width: 400px;
+  }
+
+  .table-common th,
+  .table-common td {
+    font-size: 12px;
+    padding: 6px;
+  }
+
+  .actions {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .actions button {
+    width: 100%;
+    font-size: 13px;
+  }
+
+  .box-title {
+    font-size: 13px;
+  }
+
+  .box {
+    padding: 6px 10px;
+  }
+}
+

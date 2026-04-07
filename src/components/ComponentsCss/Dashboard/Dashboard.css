@@ -1,0 +1,547 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/* * {
+  outline: 1px solid red;
+} */
+
+body {
+  height: auto;
+  background: white;
+}
+
+.dashboard {
+  display: flex;
+  font-family: "Karla", sans-serif;
+
+  /* height: 100vh; */
+}
+
+.sidebar {
+  width: 50px;
+  padding: 10px 30px 10px 20p;
+  border-right: 1px solid #ccc;
+  background: linear-gradient(
+    to bottom,
+    rgba(193, 223, 196, 0) 0%,
+    rgba(222, 236, 221, 0.9647) 100%
+  );
+  display: flex;
+  flex-direction: column;
+  transition: width 0.3s ease-in-out;
+
+  position: absolute;
+  left: 4px;
+  top: 9px;
+
+  position: fixed;
+  height: 100vh;
+}
+
+.sidebar:hover {
+  width: 160px;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-item {
+  display: flex;
+  align-items: center;
+  padding: 11px 13px;
+  color: #333;
+  transition: background-color 0.3s, padding 0.3s, color 0.3s;
+  text-decoration: none;
+}
+
+.sidebar-item:hover {
+  background-color: #e6e9e8;
+}
+
+.sidebar-icon {
+  font-size: 22px;
+  margin-right: 15px;
+}
+
+.sidebar-label {
+  font-size: 15px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  white-space: nowrap;
+}
+
+.sidebar:hover .sidebar-label {
+  opacity: 1;
+}
+
+.sidebar:hover .sidebar-item {
+  padding-left: 15px 20px;
+}
+
+.main-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  width: 93%;
+  margin-left: 10px;
+  position: absolute;
+  left: 67px;
+  top: 10px;
+  transition: margin-left 0.3s ease-in-out;
+  height: 561px;
+}
+
+.sidebar:hover ~ .main-content {
+  /* margin-left: 250px; */
+  width: 85%;
+  margin-left: 8%;
+}
+
+.top-bar {
+  background: rgb(222 236 221);
+  padding: 2px 10px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e9ecef;
+  position: sticky;
+  z-index: 100;
+  /* margin-top: 5px; */
+}
+
+.top-bar h2 {
+  margin: 0;
+  margin-left: 26px;
+  color: #0d7c66;
+  font-weight: bolder;
+  font-size: 28px;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.profile-icon-wrapper {
+  display: flex;
+  color: red;
+  align-items: center;
+  cursor: pointer;
+}
+
+.profile-icon {
+  font-size: 36px;
+  margin-right: 5px;
+  color: #84c7ae;
+}
+.top-bar {
+  max-width: 100%;
+  /* width: 100%; */
+}
+.user-name {
+  font-size: 15px;
+  color: #0d7c66;
+  font-weight: 500;
+  line-height: 18px;
+  text-align: center;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.profile-dropdown {
+  position: absolute;
+  top: 116%;
+  right: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(132, 199, 174, 0.5);
+  z-index: 1000;
+  width: 180px;
+  border-top: 1px solid rgba(132, 199, 174, 1);
+}
+
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 15px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, font-weight 0.3s;
+  border-bottom: 1px solid rgba(132, 199, 174, 0.3);
+}
+
+.dropdown-item:last-child {
+  border-bottom: none;
+}
+
+.dropdown-item:hover {
+  background-color: rgba(222, 236, 221, 1);
+}
+
+.dropdown-item svg {
+  margin-right: 10px;
+  font-size: 18px;
+  color: rgba(132, 199, 174, 1);
+}
+
+.dropdown-item span {
+  font-size: 14px;
+  color: rgba(132, 199, 174, 1);
+}
+
+.dropdown-item:hover span {
+  font-weight: 500;
+  color: black;
+}
+
+.dropdown-item:hover svg {
+  color: black;
+}
+
+.content-area {
+  flex-grow: 1;
+  padding: 5px;
+  position: relative;
+  transition: margin-top 0.3s ease;
+}
+
+.sidebar-toggle {
+  display: none;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 1000;
+  background-color: #84c7ae;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.employee-id {
+  font-size: small;
+}
+
+/* Desktop styles (1440px and above) */
+
+/* Laptop styles (up to 1024px) */
+
+/* Tablet styles (up to 768px) */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .main-content {
+    width: 89%;
+    margin-left: 0px;
+    transition: all 0.3s ease;
+    height: auto;
+    display: flex;
+    flex-direction: column; /* Important for stacking content properly */
+    align-items: stretch;
+  }
+  .sidebar {
+    width: 48px;
+    height: 96%;
+    z-index: 1000;
+  }
+  .sidebar-icon {
+    font-size: 20px;
+    margin-right: 12px;
+  }
+  .user-name {
+    font-size: 14px;
+    position: relative;
+    left: 6px;
+  }
+
+  .profile-icon {
+    font-size: 24px;
+    margin-right: -70px;
+  }
+  .sidebar-label {
+    font-size: 11px;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    /* white-space: nowrap; */
+  }
+
+  .user-profile {
+    position: relative;
+    /* left: -81px; */
+  }
+
+  .top-bar h2 {
+    margin-left: 7px;
+  }
+
+  .sidebar-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 13px;
+    color: #333;
+    transition: background-color 0.3s, padding 0.3s, color 0.3s;
+    text-decoration: none;
+  }
+  .sidebar:hover {
+    width: 120px;
+  }
+  /* .main-content {
+    min-width: 100%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    width: 114%;
+    margin-left: 10px;
+    position: absolute;
+    left: 67px;
+    top: 10px;
+    transition: margin-left 0.3s ease-in-out;
+  } */
+
+  .sidebar:hover ~ .main-content {
+    /* margin-left: 250px; */
+    width: 80%;
+    margin-left: 9%;
+  }
+
+  .top-bar {
+    background: rgb(222 236 221);
+    padding: 2px 10px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e9ecef;
+    position: sticky;
+    z-index: 100;
+    margin-top: 5px;
+  }
+
+  .top-bar h2 {
+    margin: 0;
+    margin-left: 26px;
+    color: #0d7c66;
+    font-weight: bolder;
+    font-size: 20px;
+  }
+
+  .user-profile {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+
+  .profile-icon-wrapper {
+    display: flex;
+    color: red;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .profile-icon {
+    font-size: 36px;
+    margin-right: 5px;
+    color: #84c7ae;
+  }
+
+  .user-name {
+    font-size: 17px;
+    color: #18997f;
+    font-weight: 500;
+    line-height: 23px;
+    /* text-align: left; */
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+
+  .profile-dropdown {
+    position: absolute;
+    top: 116%;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(132, 199, 174, 0.5);
+    z-index: 1000;
+    width: 180px;
+    border-top: 1px solid rgba(132, 199, 174, 1);
+  }
+
+  .dropdown-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, font-weight 0.3s;
+    border-bottom: 1px solid rgba(132, 199, 174, 0.3);
+  }
+
+  .dropdown-item:last-child {
+    border-bottom: none;
+  }
+
+  .dropdown-item:hover {
+    background-color: rgba(222, 236, 221, 1);
+  }
+
+  .dropdown-item svg {
+    margin-right: 10px;
+    font-size: 18px;
+    color: rgba(132, 199, 174, 1);
+  }
+
+  .dropdown-item span {
+    font-size: 14px;
+    color: rgba(132, 199, 174, 1);
+  }
+
+  .dropdown-item:hover span {
+    font-weight: 500;
+    color: black;
+  }
+
+  .dropdown-item:hover svg {
+    color: black;
+  }
+
+  .content-area {
+    flex-grow: 1;
+    padding: 5px;
+    position: relative;
+    transition: margin-top 0.3s ease;
+  }
+
+  .sidebar-toggle {
+    display: none;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+    background-color: #84c7ae;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+  }
+  .Insights-section h2 {
+    color: #6a9c89;
+    margin-bottom: 3px;
+    font-size: 17px;
+  }
+  .date-container select {
+    padding: 5px 8px;
+    /* border: none; */
+    font-size: 19px;
+    color: black;
+    background-color: #fff;
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+  .date-container {
+    padding: 0px 0px;
+    /* border: 2px solid #92e2be; */
+    font-size: 14px;
+    color: #92e2be;
+    background-color: #fff;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    border-radius: 4px;
+  }
+  .calendar-clock-container {
+    & .calendar {
+      & .month-year {
+        & h3 {
+          margin: 0;
+          font-size: 1rem;
+          color: rgb(84 141 119);
+          font-weight: 600;
+        }
+      }
+    }
+  }
+  .small-clock {
+    width: 142px;
+    height: 142px;
+  }
+}
+@media screen and (max-width: 767px) {
+  /* .main-content {
+    width: 100%;
+    margin-left: 0px;
+    transition: all 0.3s ease;
+    height: auto;
+  } */
+  .main-content {
+    width: 100%;
+    margin-left: 0px;
+    transition: all 0.3s ease;
+    height: auto;
+    display: flex;
+    flex-direction: column; /* Important for stacking content properly */
+    align-items: stretch;
+  }
+  .profile-icon {
+    font-size: 25px;
+    margin-right: -7px;
+  }
+  .top-bar h2 {
+    margin-left: 0px;
+  }
+  /* When sidebar is hovered, only sidebar width changes */
+  .sidebar:hover {
+    width: 90px;
+  }
+  .sidebar-label {
+    font-size: 10px;
+    font-weight: 600;
+  }
+
+  /* Optional: If you want main-content to shrink when sidebar expands */
+  .sidebar:hover ~ .main-content {
+    width: 68%;
+    margin-left: 10%;
+    font-size: 10px;
+  }
+  .sidebar:hover .sidebar-icon {
+    font-size: 10px; /* smaller icon when sidebar is hovered */
+  }
+
+  .sidebar-icon {
+    font-size: 20px; /* larger icon when sidebar is not hovered */
+    margin-right: 5px;
+    transition: font-size 0.3s ease;
+  }
+  .content-area {
+    /* border: 1px solid black; */
+    width: 100%;
+    height: auto; /* REMOVE fixed height if any */
+    /* overflow: scroll; */
+  }
+  .top-bar {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background-color: rgb(222, 236, 221);
+    /* padding: 10px; */
+    border-bottom: 1px solid #ccc;
+  }
+
+  .top-bar {
+    max-width: 100%;
+    width: 100%;
+  }
+  .top-bar h2 {
+    font-size: 17px;
+    margin-right: 5px;
+  }
+  .user-name {
+    font-size: 8px;
+    line-height: 10px;
+  }
+}

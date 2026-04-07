@@ -1,0 +1,142 @@
+.pf-report-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+  background-color: #f4f7f6;
+  min-height: calc(100vh - 80px);
+}
+
+.pf-report-container {
+  background: #ffffff;
+  width: 100%;
+  max-width: 800px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 30px 40px;
+  height: fit-content;
+}
+
+.pf-report-header {
+  border-bottom: 1px solid #eaeaea;
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+}
+
+.pf-report-header h2 {
+  font-size: 24px;
+  color: #333333;
+  margin: 0 0 8px 0;
+  font-weight: 600;
+}
+
+.pf-report-header p {
+  color: #777777;
+  margin: 0;
+  font-size: 14px;
+}
+
+.pf-report-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 24px;
+  margin-bottom: 30px;
+}
+
+.pf-form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+/* This successfully aligns your label and asterisk cleanly on one line */
+.pf-form-group label {
+  display: flex;
+  gap: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #444444;
+  margin-bottom: 8px;
+  flex-direction: row;
+  align-items: center; 
+}
+
+.pf-form-group .required {
+  color: #e74c3c;
+}
+
+/* ⭐ STRICT COLOR RULES TO PREVENT LIGHT GREEN BLEEDING */
+.pf-form-group select,
+.pf-form-group select option {
+  padding: 10px 14px;
+  border: 1px solid #cccccc;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #333333 !important; /* Forces standard black/dark-grey text */
+  background-color: #fafafa !important; /* Standardizes the background */
+  outline: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.pf-form-group select:focus {
+  border-color: #0056b3;
+  background-color: #ffffff !important;
+  box-shadow: 0 0 0 3px rgba(0, 86, 179, 0.1);
+}
+
+.pf-report-message {
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.pf-report-message.error {
+  background-color: #fdecea;
+  color: #e74c3c;
+  border: 1px solid #f5c6c2;
+}
+
+.pf-report-message.success {
+  background-color: #eafaf1;
+  color: #2ecc71;
+  border: 1px solid #c2f0d5;
+}
+
+.pf-report-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.download-btn {
+  background-color: #0056b3;
+  color: #ffffff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.download-btn:hover {
+  background-color: #004494;
+}
+
+.download-btn:disabled {
+  background-color: #a0c4e8;
+  cursor: not-allowed;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 600px) {
+  .pf-report-container {
+    padding: 20px;
+  }
+
+  .pf-report-form {
+    grid-template-columns: 1fr;
+  }
+}

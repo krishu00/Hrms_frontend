@@ -1,0 +1,13 @@
+/* Heading styles */
+.templates__title {
+    font-size: 2rem;
+    color: #0056b3;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  
+  .templates__content-head {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+  }

@@ -1,0 +1,97 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Container */
+.profile-component-container {
+  display: flex;
+  height: auto;
+  background-color: #f9f9f9;
+}
+
+/* Profile Sidebar */
+.profile-sidebar {
+  background-color: #f1f5f4;
+  width: 250px;
+  padding: 10px;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-right: 1px solid #ddd;
+
+  /* position: fixed; */
+}
+
+/* Profile Avatar */
+.profile-avatar {
+  width: 120px;
+  height: 120px;
+  background-color: #ddd;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+/* Sidebar Title */
+.profile-sidebar h2 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Profile Details */
+.profile-details p {
+  margin: 5px 0;
+  color: #555;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.profile-label {
+  font-weight: 400;
+}
+
+.profile-value {
+  color: #34a57e;
+  padding: 10px 0;
+  font-weight: 700;
+}
+
+/* Main Content */
+.profile-main-content {
+  display: flex;
+  flex-direction: column;
+  /* margin-left: 20px; To create space between the sidebar and main content */
+  flex: 1;
+  padding: 20px;
+  gap: 20px;
+}
+
+/* Ensure DisplayDetailsOfUser doesn't override flexbox behavior */
+.main-content {
+  background: #fff;
+  border-radius: 8px;
+  padding: 0px 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  min-width: 80%;
+  overflow: hidden;
+  /* height: 150vh; */
+}
+
+@media screen and (max-width: 480px) {
+  .main-content {
+    overflow: scroll;
+    /* width: %; */
+    height: auto;
+    min-width: 50%;
+    width: 77%;
+    /* height: 222%; */
+    padding: 0px 0px;
+  }
+}

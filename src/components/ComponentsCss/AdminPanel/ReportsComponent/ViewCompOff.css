@@ -1,0 +1,55 @@
+/* Add this to your CSS file for single-line alignment */
+.search-controls-inline {
+    display: flex;
+    gap: 15px; /* Adjust spacing between fields */
+    align-items: center; /* Vertically align items */
+    margin-bottom: 20px;
+}
+.search-icon-CompOff , .ReportCompOff{
+    width: 111px!important;
+}
+.request_heading{
+    font-size: 22px;
+    padding-bottom: 10px;
+    font-weight: bold;
+}
+
+/* --- CompOff List Layout and Scrolling --- */
+
+/* 1. Set up the main container to use Flexbox */
+.compoff-main-container {
+    /* Use a minimum height (e.g., 80% of viewport) or define height to 
+       allow the table wrapper to grow and push the footer down. */
+    min-height: 80vh; 
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    padding: 20px; /* Add internal padding */
+}
+
+/* 2. Configure the table wrapper for height and scrolling */
+.compoff-table-wrapper {
+  max-height: 57vh;          /* Controls vertical height */
+  overflow-y: auto;          /* Vertical scrollbar */
+  overflow-x: auto;          /* Horizontal scrollbar */
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+}
+
+/* 3. Optional: Make the table header sticky (highly recommended for usability) */
+.compoff-table-wrapper table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.compoff-table-wrapper thead {
+    /* Keeps the header visible when the user scrolls the table body */
+    position: sticky; 
+    top: 0; /* Pins it to the top of the scrollable container */
+    background-color: #e9e9e9; /* Light background to hide content scrolling underneath */
+    z-index: 10;
+}
+.apply_compOff_noReq{
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+}

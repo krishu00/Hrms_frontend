@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
+
+.loader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .loader {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: relative;
+    animation: spin 1s linear infinite;
+  }
+  
+  .loader::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+    background: conic-gradient(from 0deg, #84B394 0%, #394D3F 100%);
+  }
+  
+  .loader::after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    background-color: white;
+    border-radius: 50%;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  .no-data-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .no-data-image {
+    max-width: 100%;
+    height: auto;
+    max-height: 70vh;
+  }
+  
+  .no-data-text {
+    font-family: 'Karla', sans-serif;
+    font-size: 52px;
+    color: #484848;
+    margin-top: -135px;
+    text-shadow: 0 1px 7px rgba(117, 192, 152, 0.96);
+    -webkit-text-stroke: 1px #484848;
+  }
+  
+  .data-container {
+    padding: 20px;
+  }
+  
+
+  

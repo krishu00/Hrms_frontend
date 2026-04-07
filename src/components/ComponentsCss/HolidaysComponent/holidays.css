@@ -1,0 +1,579 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+.holidaiy-outer-section {
+  height: 80vh;
+}
+.leave-year-section {
+  display: flex;
+
+  height: 55px;
+}
+.input-button {
+  margin-bottom: 10px;
+}
+.week-days-sections label {
+  margin-bottom: 2px;
+}
+
+.input-button label {
+  margin-left: 2px;
+  margin-left: 5px;
+  font-size: 0.8rem;
+}
+.input-button input {
+  width: 44%;
+  border: 1px solid rgb(211, 209, 209);
+
+  margin-top: -3px;
+  margin-right: 2px;
+  height: 28px;
+}
+.input-button input::placeholder {
+  color: rgb(167, 167, 167);
+  margin-left: 10px;
+}
+.input-button button {
+  height: 30px;
+  background-color: rgb(132, 199, 174);
+  color: white;
+  border-radius: 5px;
+  padding: 8px;
+  font-size: 0.6rem;
+}
+.import-holiday-button {
+  width: 20%;
+  margin: 10px;
+}
+
+.import-holiday-button button {
+  height: 30px;
+  background-color: rgb(132, 199, 174);
+  color: white;
+
+  border-radius: 5px;
+  margin-left: 109px;
+  padding: 10px;
+  font-size: 0.6rem;
+  margin-top: 35px;
+}
+
+.weekly-general-button-section {
+  border-bottom: 1px solid black;
+  height: 30px;
+  display: flex;
+  gap: 5px;
+  margin-left: 9px;
+}
+.weekly-general-button-section button {
+  background-color: rgb(132, 199, 174);
+  color: white;
+  padding: 10px;
+  font-size: 0.6rem;
+}
+.weekly-general-button-section .active-button {
+  background-color: #0d7c66;
+  color: white;
+}
+
+.select-day-section {
+  margin: 10px;
+  & .select-section {
+    border: none;
+    display: flex;
+    height: 5%;
+  }
+}
+
+.select-day-section select {
+  border: 1px solid rgb(225, 225, 225);
+  width: 21%;
+  height: 30px;
+
+  border-radius: 5px;
+  margin-top: -5px;
+}
+.select-day-section label {
+  width: 173px;
+  font-size: 0.8rem;
+  margin-bottom: 0px;
+}
+
+.table_rew_rule {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 40px;
+}
+.week-select-container {
+  margin-top: 10px;
+  display: flex;
+
+  align-items: flex-start;
+}
+
+.week-option {
+  width: 48%;
+  display: flex;
+  align-items: center;
+  gap: 1px;
+  margin: -2px;
+}
+.week-option input {
+  width: 20%;
+}
+.table_holiday_date {
+  width: 37%;
+}
+.half-day-option {
+  margin-left: 15px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: -8px;
+}
+.half-day-option input {
+  width: 13%;
+}
+.all-week-container {
+  width: 65%;
+}
+.lable-of-weeks {
+  margin-left: 1px;
+  width: 10px;
+  margin-top: 0px;
+}
+
+.table-user-details {
+  margin-top: 20px;
+  overflow: scroll;
+  height: 350px;
+}
+.add-holiday-container {
+  overflow: scroll;
+  height: 200px;
+}
+.add-holiday-container th {
+  font-size: 12px;
+}
+.table-user-details tbody tr:nth-child(odd) {
+  /* border: 1px solid #000; */
+  background-color: white;
+}
+.table-user-details th {
+  background-color: rgb(216, 243, 216);
+  position: sticky;
+  top: 0;
+  text-align: center;
+  padding: 4px 1px;
+  font-size: 0.8rem;
+}
+.table-user-details td {
+  font-weight: 600;
+  font-size: 14px;
+  text-align: center;
+  background-color: white;
+  padding: 4px 1px;
+  border-bottom: 1px solid gray;
+}
+.week-section-container {
+  display: flex;
+  /* flex-wrap: wrap;
+  gap: 10px; */
+  justify-content: space-around;
+}
+
+.week-item {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  width: 45px;
+  & .lab1 {
+    margin-top: 3px;
+  }
+}
+
+.all-week-container {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.week-option {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.save-button {
+  height: 30px;
+
+  margin-top: 10px;
+  text-align: center;
+}
+
+.groupName-section {
+  display: flex;
+  height: 20%;
+  & input {
+    padding: 5px;
+    margin-bottom: 10px;
+  }
+  & .groupName {
+    padding-right: 50px;
+  }
+}
+.Group_header {
+  color: #0d7c66;
+}
+
+.is-optional-holidat-sectin {
+  display: flex;
+}
+.is-optional-holidat-sectin {
+  margin-top: 10px;
+  display: flex;
+  gap: 4px;
+  width: 200px;
+}
+.is-optional-holidat-sectin input {
+  width: 13px;
+}
+
+.lable-optinal {
+  width: 13px;
+  margin-top: 9px;
+}
+
+.table-weeek-days {
+  width: 100%;
+
+  border-spacing: 0 5px;
+
+  border: 1px solid #d9e3d9;
+  overflow: scroll;
+}
+.hoiday-date {
+  width: 11%;
+}
+
+.delete-icon {
+  cursor: pointer;
+}
+/* .addGgroup-btn {
+  margin-top: 5px;
+  margin-left: 20px;
+  font-size: 0.8rem;
+} */
+
+.AddGroup-section {
+  display: flex;
+  justify-content: end;
+  gap: 10px;
+}
+/* .global-btn import-button {
+  font-size: 12px;
+} */
+
+.import_btn {
+  padding: 0px;
+}
+.group-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding-top: 30px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.group-popup {
+  position: absolute;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+
+.popup-content h2 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.popup-content label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.popup-content input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.popup-content button {
+  color: black;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.add-weeks-button {
+  height: 45px;
+  width: 98%;
+
+  margin: 10px;
+
+  display: flex;
+  justify-content: end;
+  gap: 5px;
+}
+
+.add-weeks-button button {
+  background-color: rgb(132, 199, 174);
+  color: white;
+  height: 30px;
+  width: 68px;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+
+  font-size: 0.7rem;
+}
+
+.week-days-input {
+  border: 1px solid gray;
+  height: 25px;
+  border-radius: 4px;
+  width: 30%;
+}
+
+.weekDays-tr {
+  width: 100%;
+}
+
+.days-weeks-popup-section {
+  border: 1px solid black;
+  background-color: rgb(245, 247, 245);
+  padding: 30px;
+  border-radius: 12px;
+  position: relative;
+  width: 375px;
+  max-width: 90%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+.crossIconOfHolidays {
+  position: absolute;
+  top: 10px;
+  right: 2%;
+  cursor: pointer;
+  z-index: 999;
+}
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+.day-week-show-button {
+  background-color: rgb(132, 199, 174);
+
+  border-radius: 4px;
+  height: 30px;
+  width: 70px;
+  font-size: 0.7rem;
+  text-align: center;
+  padding: 8px;
+  color: white;
+  cursor: pointer;
+}
+.weekoff-table-wrapper {
+  width: 100%;
+  margin-top: 10px;
+}
+.weekoff-table-title {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #0d7c66;
+  margin-bottom: 6px;
+}
+
+.weekoff-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #d9e3d9;
+  background-color: #fff;
+  color: #555;
+}
+
+.weekoff-table th {
+  background-color: rgb(216, 243, 216);
+  font-size: 0.6rem;
+  font-weight: 700;
+  text-align: center;
+  /* padding: 10px 6px; */
+  border: 1px solid #d9e3d9;
+}
+
+.weekoff-table td {
+  border: 1px solid #d9e3d9;
+  /* padding: 10px 6px; */
+}
+
+.weekoff-day-cell {
+  font-weight: 700;
+  text-align: center;
+  width: 70px;
+  background-color: #f5f5f5;
+}
+
+.weekoff-check-cell {
+  text-align: center;
+}
+
+.weekoff-check-cell input {
+  width: 13px;
+  height: 13px;
+  cursor: pointer;
+}
+
+.weekoff-table th[colspan] {
+  text-align: center;
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .holidaiy-outer-section {
+    height: 80vh;
+  }
+  .weekly-general-button-section {
+    border-bottom: 1px solid black;
+    height: 30px;
+    display: flex;
+    gap: 5px;
+    margin-left: 9px;
+  }
+  .weekly-general-button-section .active-button {
+    background-color: #0d7c66;
+    color: white;
+  }
+  .weekly-general-button-section button {
+    background-color: rgb(132, 199, 174);
+    color: white;
+    padding: 10px;
+    font-size: 0.6rem;
+  }
+  .select-day-section {
+    margin: 10px;
+  }
+  .add-weeks-button {
+    height: 45px;
+    width: 98%;
+    margin: 10px;
+    display: flex;
+    justify-content: end;
+    gap: 5px;
+  }
+  .add-weeks-button button {
+    background-color: rgb(132, 199, 174);
+    color: white;
+    height: 30px;
+    width: 68px;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    font-size: 0.7rem;
+  }
+  .day-week-show-button {
+    background-color: rgb(132, 199, 174);
+    border-radius: 4px;
+    height: 30px;
+    width: 70px;
+    font-size: 0.7rem;
+    text-align: center;
+    padding: 8px;
+    color: white;
+    cursor: pointer;
+  }
+}
+
+/* Small Desktops & Laptops: 1025px to 1439px */
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+  .holidaiy-outer-section {
+    height: 80vh;
+  }
+  .weekly-general-button-section {
+    border-bottom: 1px solid black;
+    height: 30px;
+    display: flex;
+    gap: 5px;
+    margin-left: 9px;
+  }
+  .weekly-general-button-section .active-button {
+    background-color: #0d7c66;
+    color: white;
+  }
+  .weekly-general-button-section button {
+    background-color: rgb(132, 199, 174);
+    color: white;
+    padding: 10px;
+    font-size: 0.6rem;
+  }
+  .select-day-section {
+    margin: 10px;
+  }
+  .table-user-details {
+    margin-top: 20px;
+  }
+  .add-weeks-button {
+    height: 45px;
+    width: 98%;
+    margin: 10px;
+    display: flex;
+    justify-content: end;
+    gap: 5px;
+  }
+  .add-weeks-button button {
+    background-color: rgb(132, 199, 174);
+    color: white;
+    height: 30px;
+    width: 68px;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    font-size: 0.7rem;
+  }
+  .day-week-show-button {
+    background-color: rgb(132, 199, 174);
+    border-radius: 4px;
+    height: 30px;
+    width: 70px;
+    font-size: 0.7rem;
+    text-align: center;
+    padding: 8px;
+    color: white;
+    cursor: pointer;
+  }
+}

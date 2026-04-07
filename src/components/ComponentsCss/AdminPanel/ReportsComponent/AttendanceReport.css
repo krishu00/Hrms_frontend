@@ -1,0 +1,372 @@
+/* Base container for the Attendance Report component */
+.attendance-report__wrapper {
+  font-family: Arial, sans-serif;
+  padding: 20px 10px;
+  max-width: 900px;
+  /* margin: 20px auto; */
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Title styling */
+.attendance-report__title {
+  color: #333;
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Instructions/Tip section */
+.attendance-report__instructions {
+  background-color: #e0f7fa;
+  border-left: 5px solid #00bcd4;
+  padding: 15px;
+  margin-bottom: 25px;
+  border-radius: 4px;
+  color: #00796b;
+}
+
+.attendance-report__instructions p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Form layout for inputs */
+.attendance-report__form-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two columns for inputs */
+  gap: 20px; /* Space between grid items */
+  margin-bottom: 30px;
+}
+#selectedMonth {
+  padding: 12px;
+  margin-top: 4px;
+}
+/* Individual form group (label + input/select) */
+.attendance-report__form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.attendance-report__form-group label {
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #555;
+}
+
+/* Styling for date inputs and select dropdowns */
+.attendance-report__input,
+.attendance-report__select {
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  box-sizing: border-box; /* Include padding in element's total width/height */
+  width: 100%; /* Ensure they take full width of their group */
+}
+
+/* Focus styles for inputs/selects */
+.attendance-report__input:focus,
+.attendance-report__select:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* View Report Button styling */
+.attendance-report__view-button {
+  grid-column: span 2; /* Make button span both columns */
+  padding: 12px 25px;
+  background-color: rgb(132, 199, 174);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 15px;
+}
+.attendance-report__info-text{
+  margin-bottom: 15px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color:#555;
+}
+
+.attendance-report__view-button:hover {
+  background-color: rgb(97, 192, 159);
+}
+
+.attendance-report__view-button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+/* Messages (error/info) */
+.attendance-report__error-message {
+  color: #dc3545;
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.attendance-report__info-message {
+  color: #004085;
+  background-color: #cce5ff;
+  border: 1px solid #b8daff;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.attendance_view_tbn {
+  width: 160px;
+}
+/* Attendance data table container */
+.attendance-report__table-container {
+  margin-top: 30px;
+  overflow-x: auto; /* Allows horizontal scrolling for narrow screens */
+}
+
+.attendance-report__table-title {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Table styling */
+.attendance-report__table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+}
+
+.attendance-report__table thead {
+  background-color: #e2e6ea;
+}
+
+.attendance-report__table th,
+.attendance-report__table td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  text-align: left;
+  white-space: nowrap; /* Prevent text wrapping in cells */
+}
+
+.attendance-report__table th {
+  font-weight: bold;
+  color: #333;
+}
+
+.attendance-report__table tbody tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+.attendance-report__table tbody tr:hover {
+  background-color: #e9ecef;
+}
+.attendance-count-table-container {
+  max-height: 75vh; /* or whatever fits your layout */
+  overflow-y: auto; /* enable vertical scrolling */
+  /* padding-bottom: 20px; */
+  position: relative;
+}
+
+.attendance-count-table-container h3 {
+  position: sticky;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .attendance-report__form-section {
+    grid-template-columns: 1fr; /* Stack inputs on smaller screens */
+  }
+  .attendance-report__view-button {
+    grid-column: span 1;
+  }
+}
+
+.report_actionSetion {
+  display: flex;
+  margin-left: auto;
+}
+.report-Calculation-btn {
+  border: 1px solid black;
+  padding: 5px 10px;
+  margin-right: 10px;
+}
+
+.editable-table {
+  width: 100%;
+  border-collapse: collapse;
+  /* margin-top: 20px; */
+  overflow-y: scroll;
+  height: 250px;
+}
+
+.editable-table th,
+.editable-table td {
+  border: 1px solid #ccc;
+  padding: 0px;
+  text-align: center;
+}
+
+.editable-table td[contenteditable="true"] {
+  background-color: #f9f9f9;
+  cursor: text;
+}
+.counterTableHeading {
+  display: flex;
+}
+
+.Freeze_Checkbox {
+  width: 40px;
+  /* font-size: 15px; */
+}
+/* .attendance-count-table-container h3{
+  margin: 0px 0px 10px 10px;
+}
+.attendance-count_top_left_container{
+  display: flex;
+
+} */
+.attendance-count_filters {
+  display: flex;
+}
+/* Scroll container for User-wise Attendance Summary */
+.attendance-summary-scroll {
+  max-height: 320px;
+  overflow-y: auto;
+  overflow-x: auto;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background: #fff;
+}
+.attendance-summary-scroll thead th {
+  position: sticky;
+  top: 0;
+  background: #deecdd; /* same as your table head background */
+  z-index: 10;
+  padding: 5px 18px;
+  font-size: 12px;
+  /* margin-top: 20px; */
+}
+.attendance-summary-scroll::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.attendance-summary-scroll::-webkit-scrollbar-thumb {
+  background: #aaa;
+  border-radius: 10px;
+}
+
+.attendance-summary-scroll::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* .attendance-count_top_container{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 7px;
+} */
+
+.attendance-count_top_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 16px 5px 16px;
+  gap: 20px;
+}
+
+.attendance-count_top_left_container {
+  display: flex;
+  align-items: center;
+  gap: 18px; /* ✅ space between heading and filters */
+}
+
+.attendance-count_filters {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* ✅ space between dropdown + input */
+}
+
+.attendance-count_filters select {
+  /* padding: 10px 14px; */
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  padding-top: 5px;
+}
+
+.attendance-count_filters input[type="search"] {
+  /* padding: 9px 11px; */
+  padding-top: 7px;
+
+  width: 170px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.attendance-count_search {
+  display: flex;
+  /* background-color: rgb(132 199 174 / 67%); */
+  margin-left: auto;
+  padding: 4px 8px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: large;
+}
+
+.AttendanceSummary_header {
+  display: flex;
+}
+.Attendance_Summary_dateRange {
+  margin: 8px;
+  font-size: x-small;
+}
+
+.LeaveAdjustment-popup-overlay {
+  display: flex;
+  flex-direction: column;
+
+  height: auto;
+  max-width: 60vw;
+}
+.LeaveAdjustment_close-btn button {
+  font-size: 1.5rem;
+}
+.editLeaveBalance_header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1.5px solid rgba(128, 128, 128, 0.339);
+  padding-bottom: 10px;
+}
+.editLeaveBalance_header h3 {
+  font-weight: 400;
+}
+.LeaveAdjustment_headerName {
+  display: flex;
+  padding: 9px 0px 0px 0px;
+}
+
+.adjust_save_btn {
+  /* border-top: 1px solid gray; */
+  /* align-items: end; */
+  display: flex;
+  justify-content: end;
+  && .adjust_save {
+    border-radius: 8px;
+    border: 1px solid #808080a1;
+    padding: 3px 12px;
+    margin-top: 12px;
+    background-color: rgb(132 199 174 / 49%);
+  }
+}

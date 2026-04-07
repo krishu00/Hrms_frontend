@@ -1,0 +1,307 @@
+.company_container {
+  padding: 20px;
+  background: #f9f9f9;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+}
+
+/* === Header Section === */
+.header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.company_title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.company_title .title {
+  font-size: 24px;
+  color: #0d7c66;
+  font-weight: bold;
+}
+
+.company-search-container {
+  position: relative;
+  width: 100%;
+  max-width: 350px;
+}
+
+.companyCodeInput {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+}
+
+.companyCodeInput:focus {
+  border-color: #007bff;
+}
+
+.company-suggestions {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-top: none;
+  max-height: 150px;
+  overflow-y: auto;
+  z-index: 999;
+  border-radius: 0 0 6px 6px;
+}
+
+.company-suggestion-item {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.company-suggestion-item:hover {
+  background-color: #f0f0f0;
+}
+
+/* === Filter Section === */
+.filter-section {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 15px;
+}
+
+.filter-label {
+  font-size: 11px;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 4px;
+  display: block;
+  width: 100px;
+  margin-top: 10px;
+}
+
+.filter-input {
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: auto;
+  outline: none;
+  transition: 0.3s;
+  color: #333;
+}
+
+.filter-input select {
+  color: black !important; /* Set the text color to black */
+}
+.filter-input:focus {
+  border-color: #76c5a7;
+}
+.search-button {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff; /* Change to your preferred color */
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-left: 10px; /* Add some space from the filters */
+}
+
+.search-button:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* === Scrollable Table Container === */
+.user-table-container {
+  max-height: 400px;
+  overflow-y: auto;
+  border-radius: 8px;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* === Table Styles === */
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.user-table th,
+.user-table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.user-table th {
+  background-color: #deecdd;
+  color: black;
+  font-size: 12px;
+  font-weight: bold;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.user-table td {
+  font-weight: 600;
+  color: #333;
+  font-size: 11px;
+}
+
+/* === Action Icons === */
+.action {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+  margin-left: -60px;
+}
+
+.icon {
+  cursor: pointer;
+  font-size: 16px;
+  transition: color 0.3s;
+  color: #84c7ae;
+  margin-left: -4px;
+}
+
+/* === Popup Styles === */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.popap {
+  position: relative;
+  background: linear-gradient(rgb(248, 248, 248), rgb(225, 240, 222));
+  padding: 25px;
+  border-radius: 10px;
+  width: 380px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.bulk_heading {
+  font-size: 18px;
+  color: #004c3f;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.enterCompanyCode {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: #333;
+  text-align: left;
+}
+
+.companyCodeSelect {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  margin-bottom: 12px;
+  background: #fff;
+}
+
+.file-upload-bulk input[type="file"] {
+  display: block;
+  margin: 10px auto;
+  width: 100%;
+  font-size: 13px;
+}
+
+.leaveiconarrow {
+  color: #84c7ae;
+  font-size: 13px;
+  /* top: 5px; */
+  position: relative;
+  z-index: 1;
+  margin-left: -30px;
+  font-weight: 700;
+  height: 24px;
+}
+
+.submitBtnmutli {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.uploadBulkBtn,
+.SampleDownBtn {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.uploadBulkBtn {
+  background-color: rgb(116, 197, 167);
+}
+
+.uploadBulkBtn:hover {
+  background-color: rgb(98, 174, 145);
+}
+
+.SampleDownBtn {
+  background-color: #74c5a7;
+}
+
+/* .SampleDownBtn:hover {
+  background-color: #046d58;
+} */
+
+/* === Close (Cross) Button - Inside Popup === */
+.closBtnBulk {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  background: transparent;
+  border: none;
+  font-size: 28px;
+  color: #004c3f;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.closeBtnBulk:hover {
+  color: #ff4d4d;
+}
+
+/* === Optional: Modern Scrollbar === */
+.user-table-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.user-table-container::-webkit-scrollbar-thumb {
+  background-color: #c4c4c4;
+  border-radius: 4px;
+}
+
+.user-table-container::-webkit-scrollbar-thumb:hover {
+  background-color: #9e9e9e;
+}

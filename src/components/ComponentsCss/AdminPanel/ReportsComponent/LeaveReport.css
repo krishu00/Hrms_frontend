@@ -1,0 +1,302 @@
+/* src/ComponentsCss/AdminPanel/ReportsComponent/LeaveReport.css */
+
+.leave-report-container {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 25px;
+  background-color: #f8f9fa; /* Lighter background */
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Softer shadow */
+  max-width: 950px; /* Slightly wider */
+
+  position: relative;
+  height: 100%;
+  overflow: scroll;
+}
+
+.report-header {
+  display: flex;
+  justify-content:flex-start;
+  align-items: center;
+  margin-bottom: 5px;
+  padding-bottom: 7px;
+  border-bottom: 1px solid #e0e0e0; /* Lighter border */
+}
+
+.report-header h2 {
+  margin: 0;
+  color: #343a40; /* Darker text for contrast */
+  font-size: 24px;
+  font-weight: bold;
+  width: 100%;
+}
+
+.close-button {
+  background-color: #28a745; /* Bootstrap green */
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px; /* Slightly larger */
+  height: 40px;
+  font-size: 24px; /* Larger icon */
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.close-button:hover {
+  background-color: #218838; /* Darker green on hover */
+  transform: scale(1.05);
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two columns */
+  gap: 5px 100px;
+  margin-bottom: 10px;
+}
+
+.form_group_report {
+  display: flex;
+  flex-direction: row;
+}
+
+.form_group_report label {
+  font-weight: 500; /* Medium font weight */
+  margin-bottom: 8px;
+  color: #495057; /* Slightly softer black */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 12px;
+  width: 6rem;
+}
+
+/* For the red asterisk based on the screenshot */
+.form_group_report:nth-child(1) label::after, /* From Date */
+  .form_group_report:nth-child(2) label::after {
+  /* To Date */
+  content: "*";
+  color: red;
+  margin-right: 4px;
+}
+
+.form_group_report input[type="text"],
+.form_group_report input[type="date"],
+.form_group_report select {
+  width: 100%;
+  padding: 10px 12px; /* Slightly more padding */
+  border: 1px solid #ced4da; /* Lighter border color */
+  border-radius: 5px; /* Slightly more rounded corners */
+  font-size: 15px;
+  box-sizing: border-box;
+  background-color: white;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form_group_report input[type="text"]:focus,
+.form_group_report input[type="date"]:focus,
+.form_group_report select:focus {
+  border-color: #80bdff; /* Blue focus border */
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Blue focus shadow */
+  outline: none; /* Remove default outline */
+}
+
+.input-with-icon {
+  position: relative;
+  width: 100%;
+}
+
+.input-with-icon input[type="date"] {
+  padding-right: 10px; /* Space for the icon */
+  cursor: pointer;
+}
+
+/* .calendar-icon {
+    position: absolute;
+    right: 2px; 
+    top: 50%;
+    transform: translateY(-50%);
+        color: #6c757d;
+    cursor: pointer;
+    font-size: 22px;
+  } */
+.report-actions {
+  display: flex;
+  justify-content: flex-end;
+  /* gap: 20px;  */
+  /* padding-top: 10px; */
+  border-top: 1px solid #e0e0e0;
+}
+
+.export-button {
+  padding: 9px 21px;
+  border: none;
+  border-radius: 6px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease,
+    box-shadow 0.2s ease;
+  font-weight: 500;
+}
+
+.view_button {
+  /* background-color: #28a745; Green */
+  margin-top: 10px;
+}
+
+.export-button {
+  background-color: #007bff; /* Blue */
+  color: white;
+}
+
+.export-button:hover {
+  background-color: #0069d9;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
+}
+
+/* Floating Close Button at bottom right */
+.floating-close-container {
+  position: fixed;
+  bottom: 25px; /* Slightly more space from bottom */
+  right: 25px; /* Slightly more space from right */
+  z-index: 1000;
+}
+
+.floating-close-button {
+  background-color: #28a745; /* Green */
+  color: white;
+  border: none;
+  border-radius: 30px; /* More rounded, pill shape */
+  padding: 12px 25px; /* More padding */
+  font-size: 17px;
+  display: flex;
+  align-items: center;
+  gap: 10px; /* More space between text and icon */
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25); /* Stronger shadow */
+  transition: background-color 0.3s ease, transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.floating-close-button:hover {
+  background-color: #218838;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.message-icon {
+  font-size: 22px; /* Larger icon */
+  line-height: 1; /* Align vertically */
+}
+.form-group input[type="date"],
+.form-group select:hover {
+  cursor: pointer;
+}
+.form-group input[type="date"] {
+  width: 100%;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  margin-top: 0px;
+}
+.form-group input[type="text"],
+.form-group select {
+  padding: 10px;
+  border: none;
+  background-color: white;
+  box-sizing: border-box;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  margin-top: 0px;
+
+  width: 100%;
+}
+.form-group {
+  margin-bottom: -7px;
+  padding: 5px;
+  position: relative;
+}
+/* Responsive adjustments */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .form-grid {
+    grid-template-columns: 1fr; /* Single column on smaller screens */
+    gap: 20px;
+  }
+
+  .leave-report-container {
+    padding: 20px;
+    margin: 15px auto;
+  }
+
+  .report-header h2 {
+    font-size: 22px;
+  }
+
+  .close-button {
+    width: 35px;
+    height: 35px;
+    font-size: 20px;
+  }
+
+  .export-button {
+    width: 100%;
+    padding: 12px 20px;
+  }
+
+  .floating-close-container {
+    bottom: 15px;
+    right: 15px;
+  }
+
+  .floating-close-button {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+  .form_group_report input[type="text"],
+  .form_group_report input[type="date"],
+  .form_group_report select {
+    width: 100%;
+    padding: 10px 12px; /* Slightly more padding */
+    border: 1px solid #ced4da; /* Lighter border color */
+    border-radius: 5px; /* Slightly more rounded corners */
+    font-size: 15px;
+    box-sizing: border-box;
+    background-color: white;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+}
+
+@media (max-width: 480px) {
+  .leave-report-container {
+    padding: 15px;
+    margin: 10px;
+    border-radius: 8px;
+  }
+
+  .report-header {
+    margin-bottom: 20px;
+  }
+
+  .report-header h2 {
+    font-size: 20px;
+  }
+
+  .form_group_report label {
+    font-size: 14px;
+  }
+
+  .form_group_report input,
+  .form_group_report select {
+    padding: 8px 10px;
+    font-size: 14px;
+  }
+
+  .calendar-icon {
+    font-size: 18px;
+    right: 8px;
+  }
+}

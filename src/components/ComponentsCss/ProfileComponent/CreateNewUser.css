@@ -1,0 +1,58 @@
+
+
+.new_User_heading {
+    font-size: 22px;
+    font-weight: 700;
+    text-align: center;
+  }
+  
+  .CreateNewUser_employeid {
+    display: flex;
+    gap: 25px;
+    padding-top: 8px;
+  }
+  
+  .DisplayDetailsOfUser {
+    position: relative;
+    /* border: 1px solid rgb(200, 200, 200); */
+    height: 428px;
+    /* height: 611px; */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    /* background: #fff; */
+    padding: 5px;
+    border-radius: 8px;
+    /* box-shadow: 0 0 8px rgba(0, 0, 0, 0.1); */
+    width: 100%; /* Ensure each child takes the full available width */
+    box-sizing: border-box; /* Ensures padding is included in width calculation */
+  }
+  .edit-user-detail {
+    margin-top: -31px;
+  }
+  .newUser_save_btn {
+    padding: 12px 17px;
+    border-radius: 5px;
+    position: relative;
+    display: flex;
+    left: 88%;
+    top: -59px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+    color: #555;
+  }
+  /* .navigation-buttons {
+   
+    position: absolute;
+    bottom: 0;
+    margin-left: 30%;
+  
+  
+    width: 68%;
+   
+    display: flex;
+    justify-content: center;
+    gap: 350px;
+    margin-bottom: 5px;
+  } */
+  
+  

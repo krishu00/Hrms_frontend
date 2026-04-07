@@ -1,0 +1,445 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+.user_outer_main_container {
+  border: 1px solid black;
+  height: auto;
+  width: 100%;
+}
+.employee-details-form {
+  /* max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(
+    to bottom,
+    rgba(193, 223, 196, 0) 0%,
+    rgba(222, 236, 221, 0.9647) 100%
+  );
+  border-radius: 25px; */
+
+  padding: 10px;
+  /* border: 1px solid rgb(189, 188, 188); */
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(
+    to bottom,
+    rgba(193, 223, 196, 0) 0%,
+    rgba(222, 236, 221, 0.9647) 100%
+  );
+  border-radius: 25px;
+  width: 100%;
+  /* max-width: 800px; */
+  margin: 10px;
+  height: 373px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.input_group {
+  margin-bottom: 12px;
+}
+.input_group input {
+  height: 39px;
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: "Karla", sans-serif;
+}
+.input_group input[type="date"] {
+  margin-top: 0px;
+  height: 39px;
+}
+.input_group label {
+  display: block;
+  margin-bottom: 0px;
+  color: #555;
+  height: 22px;
+}
+.input_group_lable{
+  display: flex;
+
+  height: 39px;
+  width: 100%;
+  padding: 0.5rem;
+  /* border: 1px solid #ccc; */
+  /* border-radius: 4px; */
+  /* font-family: "Karla", sans-serif; */
+}
+.input_group_lable label{
+  width: 90%;
+}
+.user_section_row {
+  display: flex;
+  justify-content: space-between; /* Space out child elements */
+  margin-top: -4px;
+}
+.user_section_row_checkBox {
+  display: flex;
+  justify-content: space-between; /* Space out child elements */
+  margin-top: 4px;
+}
+.user_section_row .input_group {
+  flex: 1; /* Make each input take equal space */
+  margin-right: 10px; /* Add right margin to create space between inputs */
+}
+
+.user_section_row .form-group:last-child {
+  margin-right: 0; /* Remove margin for the last child */
+}
+
+.input_group select {
+  /* padding: 11px; */
+  margin-top: 0px;
+  height: 39px;
+  border: 1px solid black;
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.input_group [type="text"],
+.input_group [type="number"],
+.input_group [type="email"] {
+  padding: 11px;
+  margin-top: 0px;
+}
+.navigation-buttons {
+  /* border: 1px solid black; */
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 70px;
+}
+.navigation-buttons button {
+  /* border: 1px solid black;  */
+  height: 37px;
+  width: 78px;
+  padding: 8px 2px;
+  /* border: 1px solid rgb(200, 200, 200); */
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+
+  border-radius: 5px;
+  /* width: auto; */
+  margin-top: -2px;
+}
+.user-tracket-main {
+  width: 100%;
+  display: flex;
+}
+.employee-form {
+  width: 100%;
+}
+.new-user-tracker-details {
+  /* border: 1px solid rgb(202, 196, 196); */
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(
+    to bottom,
+    rgba(201, 222, 203, 0) 0%,
+    rgba(222, 236, 221, 0.9647) 100%
+  );
+  width: 30%;
+  height: 377px;
+  border-radius: 25px;
+  margin: 10px;
+}
+.new-user-tracker-data {
+  position: relative;
+  height: 310px;
+  width: 265px;
+}
+.new-user-tracker-data li {
+  display: flex;
+  font-size: small;
+  margin: 13px;
+  height: 26px;
+  width: 200px;
+  margin-left: 40px;
+}
+.new-user-input-radio {
+  /* position: absolute;  */
+  width: 7%;
+  position: relative;
+  z-index: 2;
+}
+.new-user-lable-details {
+  font-size: 14px;
+  margin-left: 16px;
+  margin-top: 5px;
+}
+
+.radio-valid {
+  border: 2px solid green;
+}
+.radio-invalid {
+  border: 2px solid red;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+  background-color: white;
+  cursor: pointer;
+  left: 870px;
+  top: 145px;
+  z-index: 100;
+  width: 500px;
+  border-radius: 4px;
+  height: 100px;
+  overflow-y: scroll;
+}
+
+.options {
+  margin: 2px 4px;
+  border-radius: 4px;
+}
+
+.options:hover {
+  background-color: #e6e9e8;
+}
+
+.highlighted_star {
+  color: red;
+  /* font-size: 20px; */
+  /* margin-top: 1%; */
+}
+
+.border_red {
+  accent-color: rgb(214, 25, 25);
+  border: red;
+}
+
+.border_green {
+  accent-color: rgb(66, 152, 66);
+  border: green;
+}
+
+.employee_status {
+  padding: 10px;
+}
+.update-button {
+  font-size: 0.7rem;
+}
+
+/* Add to NewUserSection.css */
+.scrollable-form {
+  max-height: 80vh;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+.readonly-section {
+  margin-bottom: 32px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 24px;
+}
+
+.back_button_navigate {
+  height: 24px;
+  width: 100%;
+  /* border: 1px solid black; */
+  font-size: 23px;
+  color: gray;
+  cursor: pointer;
+}
+
+.back_button_navigate button {
+  cursor: pointer;
+  padding: 1px 12px;
+  font-size: 21px;
+  /* background-color: #7f8c8d; */
+  /* color: white; */
+  border: none;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+.back_button_navigate button:hover {
+  background-color: #c6d4ca;
+}
+
+/* Vertical line */
+.new-user-tracker-details ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+.new-user-tracker-details li {
+  position: relative;
+  padding-left: 30px; /* space for radio and line */
+  /* margin-bottom: 40px; spacing between items */
+}
+.new-user-tracker-details li::before {
+  content: "";
+  position: absolute;
+  top: 22px;
+  left: 35px;
+  width: 1px;
+  height: 78%;
+  background-color: #ccc;
+  z-index: 0;
+}
+
+/* Remove line on last item */
+.new-user-tracker-details li:last-child::before {
+  height: 0px;
+}
+
+/* ===================== Responsive Design ===================== */
+
+/* ========== Mobile-first Base (default) ========== */
+
+@media (max-width: 767px) {
+  .user-tracket-main {
+    flex-direction: column;
+  }
+
+  .employee-form {
+    overflow-y: auto;
+    max-height: 80vh;
+    padding-right: 10px;
+  }
+
+  .employee-details-form {
+    height: auto;
+    overflow-y: visible;
+    padding: 12px;
+    margin: 10px;
+  }
+
+  .user_section_row {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .input_group {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .input_group input,
+  .input_group select {
+    width: 100%;
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .navigation-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 12px;
+  }
+
+  .navigation-buttons button {
+    width: 90%;
+    max-width: 300px;
+  }
+
+  .back_button_navigate button {
+    font-size: 18px;
+  }
+
+  .new-user-tracker-details {
+    display: none;
+  }
+
+  .absolute {
+    position: static;
+    width: 100%;
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+  }
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .user_section_row {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .user_section_row .input_group {
+    width: 48%;
+    margin-bottom: 12px;
+  }
+
+  .new-user-tracker-details {
+    width: 33%;
+    border-radius: 25px;
+  }
+
+  .new-user-tracker-data {
+    width: 100%;
+    height: auto;
+  }
+
+  .new-user-tracker-data li {
+    font-size: 0.95rem;
+    margin-left: 30px;
+  }
+
+  .absolute {
+    width: 70%;
+    left: 15%;
+  }
+
+  .navigation-buttons {
+    gap: 30px;
+  }
+
+  .navigation-buttons button {
+    width: 120px;
+  }
+  .new-user-lable-details {
+    font-size: 9px;
+    margin-left: 11px;
+    margin-top: 5px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1025px) {
+  .user_section_row {
+    flex-direction: row;
+  }
+
+  .new-user-tracker-details {
+    width: 30%;
+  }
+
+  .new-user-tracker-data {
+    width: 265px;
+  }
+
+  .new-user-tracker-data li {
+    font-size: small;
+    margin-left: 40px;
+  }
+
+  .absolute {
+    width: 500px;
+    left: 870px;
+  }
+
+  .navigation-buttons {
+    flex-direction: row;
+    gap: 70px;
+  }
+
+  .navigation-buttons button {
+    width: 78px;
+  }
+}

@@ -1,0 +1,8 @@
+.request_global_div{
+    width: 50vw;
+}
+@media (max-width: 600px) {
+    .request_global_div{
+        width: 85vw;
+    }
+}

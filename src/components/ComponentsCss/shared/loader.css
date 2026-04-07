@@ -1,0 +1,26 @@
+.btn_Submit button {
+  /* base button styles can remain in individual form files */
+}
+
+.btn_Submit button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* when loading is true the SubmitButton adds this class */
+.btn_Submit button.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+/* spinner icon animation used by SubmitButton */
+.spinner {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

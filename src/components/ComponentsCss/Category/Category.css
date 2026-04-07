@@ -1,0 +1,175 @@
+.category_outer_container {
+  /* border: 1px solid black; */
+  width: 100%;
+}
+.categoryOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Actual form box */
+.addCategoryForm {
+  width: 400px;
+  background-color: rgb(235, 240, 234);
+  padding: 20px 25px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Close button inside form */
+.categoryCloseButton {
+  border: none;
+  background: transparent;
+  color: #555;
+  font-size: 22px;
+  cursor: pointer;
+  position: absolute;
+  right: 15px;
+  top: 10px;
+}
+
+/* Button to open form */
+.addCategoryButton {
+  padding: 8px 5px;
+  font-size: 12px;
+
+  cursor: pointer;
+  position: absolute;
+  right: 30px;
+  top: 15px;
+}
+
+/* Table styles */
+.categoryTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 60px;
+  position: relative;
+  height: 350px;
+  overflow: scroll;
+}
+.categoryTable td {
+  overflow: scroll;
+  width: 35%;
+}
+.categoryTable td::-webkit-scrollbar {
+  display: none;
+}
+.editCategoryButton {
+  border-right: 3px solid black;
+  padding-right: 1rem;
+}
+
+.deleteCategoryButton {
+  padding-left: 1rem;
+}
+
+.add {
+  font-size: 1.2rem;
+}
+.add_buttons {
+  /* width: 60px;
+  border-radius: 3px; */
+
+  /* font-size: 14px; */
+  margin-left: 289px;
+  margin-top: 5px;
+}
+
+.categoryTable table {
+  width: 100%;
+  /* border-collapse: separate; */
+  border-spacing: 0 5px;
+  margin-top: -5px;
+  border: 1px solid #d9e3d9;
+}
+
+.categoryTable th {
+  background-color: #deecdd;
+  position: sticky;
+  top: 0;
+  text-align: center;
+  padding: 4px 1px;
+}
+.categoryTable td {
+  font-weight: 600;
+  font-size: 11px;
+  text-align: center;
+  padding: 4px 1px;
+}
+
+.categoryTable tr:nth-child(odd) {
+  background-color: #c6bcbc37;
+}
+.categoryTable td {
+  font-size: 11px;
+}
+.categoryOptionSelect {
+  width: 50%;
+  padding: 4px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.categoryOptionSelect ::--webkit-scrollbar{
+  width: 1px;
+  border-radius: 2px;
+
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .addCategoryButton {
+    background-color: #84c7ae;
+    border: none;
+    color: white;
+    padding: 9px 10px;
+    font-size: 13px;
+    border-radius: 4px;
+    cursor: pointer;
+    position: absolute;
+    right: 30px;
+    top: 15px;
+  }
+
+  .categoryTable td {
+    font-size: 16px;
+  }
+  .categoryTable th {
+    background-color: #deecdd;
+    position: sticky;
+    top: 0;
+    text-align: center;
+    padding: 4px 1px;
+  }
+}
+
+/* Small Desktops & Laptops: 1025px to 1439px */
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+  .categoryTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 60px;
+    position: relative;
+    font-size: 20px;
+  }
+  .categoryTable td {
+    font-size: 13px;
+  }
+  .categoryTable th {
+    background-color: #deecdd;
+    position: sticky;
+    top: 0;
+    text-align: center;
+    padding: 4px 1px;
+  }
+}

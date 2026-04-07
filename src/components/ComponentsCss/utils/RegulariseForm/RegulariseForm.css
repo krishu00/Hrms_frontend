@@ -1,0 +1,176 @@
+.regularise-container {
+  width: 80%;
+  height: 70%;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  overflow:auto;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+/* Header Section */
+.regularise-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+
+.add-btn {
+  background: #84C7AE;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+.regulariseContantDiv{
+  height: 65%;
+  overflow-y:scroll;
+}
+/* Table Headers */
+.regularise-table-header {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  background: #f0f0f0;
+  padding: 8px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+
+.regularise-table-header span {
+  flex: 1;
+  text-align: center;
+}
+
+/* Table Rows */
+.regularise-row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.regularise-row input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.remove-btn {
+  font-size: 18px;
+  color: black;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+  font-weight: 700;
+
+}
+
+/* Buttons */
+.regulariseButtons {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.cancel-btn {
+  background: #ccc;
+  color: black;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.submit {
+  background: #84C7AE;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+
+
+
+
+/* Hide the actual date input */
+.hidden-date-input {
+  position: absolute;
+  opacity: 0;
+ 
+  pointer-events: none;
+left: 75%;
+}
+
+
+
+
+
+/* added calender  */
+
+.calendar-container {
+  margin-top: -24px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  width: 450px;
+  position: absolute;
+  border-radius: 10px;
+  right: 180px;
+  background-color: aliceblue;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color:#4b7d6b;
+}
+.calendar-header_arrow_left {
+  font-size: 22px;
+  font-weight: 700;
+
+  padding-left: 20px;
+}
+.calendar-header_arrow_right {
+  font-size: 22px;
+  font-weight: 700;
+
+  padding-right: 20px;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+}
+
+.calendar-day-header {
+  font-weight: bold;
+  border-bottom: 1px solid #ccc;
+  padding: 5px;
+color: #84C7AE;
+}
+
+.calendar-day {
+  padding: 5px;
+  border: 1px solid #eee;
+  cursor: pointer;
+}
+
+.calendar-day p {
+  font-size: 12px;
+  color: #555;
+}

@@ -1,0 +1,287 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Karla", sans-serif;
+  background: linear-gradient(to bottom, #ffffff -8%, #e0ece0 59%, #ddebdd 0%);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-container {
+  position: relative;
+  background-color: white;
+  padding: 5rem 2rem;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+h2 {
+  text-align: center;
+  font-family: "Karla", sans-serif;
+}
+
+.login-heading {
+  font-size: 50px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #555;
+}
+
+input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: "Karla", sans-serif;
+}
+
+.login-button {
+  padding: 20px 10px 20px 35px;
+  width: 40%;
+  margin-right: 30%;
+  height: 55px;
+  font-weight: 400;
+  font-size: 27px;
+}
+
+.forget-password {
+  margin-left: 20px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 50%;
+  top: 75%;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.forget-password-button {
+  border: none;
+  color: blue;
+  cursor: pointer;
+}
+
+.bordered-box {
+  border: 2px solid #4caf50;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.otp-input,
+.new-password-input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.phone-input {
+  padding: 8px 1px 8px 1px;
+  width: 100%;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.send-otp-button,
+.cancel-button,
+.validate-otp-button,
+.login-after-otp-button,
+.reset-password-button,
+.reset-password-submit-button {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.send-otp-button:disabled {
+  margin-right: 10px;
+  background-color: #717070;
+  cursor: not-allowed;
+}
+
+/* reseat password css */
+.reset-password-container {
+  border: 1px solid #ccc;
+
+  top: 50px;
+
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background: linear-gradient(to bottom, #ffffff -8%, #e0ece0 59%, #ddebdd 0%);
+  font-family: "Karla", sans-serif;
+}
+.submit-button-container {
+  display: flex;
+  justify-content: center;
+}
+.reset-password-submit-button {
+  padding: 8px 14px !important;
+  justify-content: center;
+}
+
+.first-login-heading {
+  font-size: 34px;
+  color: rgb(13, 124, 102);
+}
+
+.sign-in-header {
+  color: rgb(13, 124, 102);
+  text-align: center;
+}
+
+/* ===== Password field with eye icon ===== */
+
+.password-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-input-wrapper input {
+  width: 100%;
+  padding-right: 40px; /* space for icon */
+}
+
+.eye-icon {
+  position: absolute;
+  right: 12px;
+  cursor: pointer;
+  color: #555;
+  font-size: 18px;
+}
+
+.eye-icon:hover {
+  color: #4caf50;
+}
+.popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.popup-content {
+  background: white;
+  padding: 20px;
+  width: 90%;
+  max-width: 400px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+/* ===========================
+   MOBILE & TABLET RESPONSIVE
+   =========================== */
+
+@media (max-width: 768px) {
+  body {
+    padding: 16px;
+    height: auto;
+    align-items: flex-start;
+  }
+
+  .login-container {
+    padding: 2rem 1.5rem;
+    max-width: 100%;
+    margin-top: 40px;
+  }
+
+  .login-heading {
+    font-size: 28px;
+    padding: 10px;
+    margin-bottom: 1rem;
+  }
+
+  .login-form {
+    width: 100%;
+  }
+
+  .form-group {
+    margin-bottom: 1rem;
+  }
+
+  label {
+    font-size: 14px;
+  }
+
+  input,
+  .new-password-input,
+  .phone-input {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .reset-password-submit-button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    /* margin-top: 10px; */
+    justify-content: center !important;
+  }
+
+  .error-message {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .forget-password {
+    position: static;
+    transform: none;
+    margin-top: 15px;
+    text-align: center;
+  }
+}
+
+/* ===========================
+   SMALL MOBILE (≤ 480px)
+   =========================== */
+
+@media (max-width: 480px) {
+  .login-heading {
+    font-size: 24px;
+  }
+
+  .login-container {
+    padding: 1.5rem 1rem;
+    border-radius: 6px;
+  }
+
+  input {
+    font-size: 13px;
+  }
+
+  .reset-password-submit-button {
+    font-size: 15px;
+    /* padding: 10px; */
+  }
+}

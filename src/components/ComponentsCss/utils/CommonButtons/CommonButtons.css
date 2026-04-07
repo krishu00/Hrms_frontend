@@ -1,0 +1,110 @@
+
+  
+.primary-button {
+    background-color: #658058;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+  }
+  .primary-button:focus{
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(101, 128, 88, 0.5);
+  }
+  
+  .primary-button:hover {
+    background-color: #708871;
+  }
+  .secondary-button {
+    background-color: white;
+    color: #658058;
+    padding: 10px 20px;
+    border: 2px solid #658058;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    margin-left: 10px; 
+  }
+  
+  .secondary-button:hover {
+    background-color: #658058;
+    color: white;
+  }
+  
+  .secondary-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(101, 128, 88, 0.5);
+  }
+  
+  .secondary-button:active {
+    background-color: #4d6042;
+    border-color: #4d6042;
+    color: white;
+  }
+
+  .apply-button {
+    background-color: #658058; 
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+    margin-left: 10px;
+  }
+  .icon-text-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #658058;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    color: white;
+    font-size: 14px;
+    margin-left: 10px ;
+    
+  }
+  
+ 
+  
+  .icon-text-button svg {
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
+    margin-right: 8px;
+  }
+  
+  .icon-text-button span {
+    font-weight: 500;
+  }
+.secondcolor button{
+    background-color: #88A1A1 ;
+    color: black;
+    
+}
+.thirdcolor button{
+
+    background-color: #0070FF;
+    color:white;
+
+}
+.fourthcolor button{
+    background-color:  #42B542;
+    color:white;
+}
+
+
+
+    
+

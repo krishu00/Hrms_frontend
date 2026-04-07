@@ -1,0 +1,635 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+.define-leave-main {
+  /* border: 1px solid black; */
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  height: 479px;
+  overflow: scroll;
+}
+.outer-container-addLeave {
+  width: 100%;
+  /* height: 80vh; */
+  /* border: 1px solid black; */
+}
+
+.add_leave_header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin: 0.5rem 0rem;
+}
+
+.header-left-buttons {
+  display: flex;
+  gap: 10px;
+}
+.header-right-title {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.heading-add button:hover {
+  cursor: pointer;
+}
+
+.add-leave-table {
+  padding: 5px;
+  /* border: 1px solid black; */
+  width: 100%;
+  /* height: 100px; */
+}
+.delete-icon {
+  color: #84c7ae;
+  height: 18px;
+  width: auto;
+}
+.inputs-after-check-main {
+  display: grid;
+  grid-template-columns: 2fr 2fr 2fr 2fr;
+  padding: 4px;
+  height: 26px;
+  font-size: 0.7rem;
+  text-align: center;
+  /* background-color: #d8f3d8; */
+  width: 100%;
+  /* margin: 0px; */
+  /* font-weight: 600; */
+  /* border-radius: 4px; */
+}
+.inputs-after-check-main input {
+  width: 80%;
+  margin: 3px;
+  padding: 2px;
+  border: 1px solid #8c8c8c;
+  border-radius: 4px;
+  font-family: "Karla", sans-serif;
+}
+.input-tables {
+  width: 100%;
+}
+.input-tables input[type="number"]::placeholder {
+  font-size: 10px;
+  color: #838383;
+}
+.input-tables p {
+  margin-top: 8px;
+  font-size: 0.8rem;
+}
+.bottom-line {
+  width: 99%;
+  border-bottom: 1px solid rgb(200 200 200);
+  margin-top: 5px;
+}
+.new-joinee-table-section {
+  display: flex;
+  flex-direction: column;
+  /* border: 1px solid black; */
+  /* position: relative; */
+  box-sizing: border-box;
+  /* position: absolute; */
+  border: 1px solid #767272;
+  width: 45%;
+  border-radius: 4px;
+  margin-top: 8px;
+}
+.button-add-row {
+  display: flex;
+  gap: 25px;
+  /* margin-top: 10px; */
+  margin: 10px;
+}
+.button-add-row button {
+  background-color: rgb(132, 199, 174);
+  color: white;
+  height: 26px;
+  padding: 3px;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+  font-size: 9px;
+  width: 65px;
+}
+/* forms section css */
+
+.form-section-add-leave {
+  /* border: 1px solid black; */
+  height: auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+.heading-add button {
+  all: unset;
+  color: white;
+  background-color: #75b39d;
+  width: 80px;
+  height: 28px;
+  text-align: center;
+  border-radius: 4px;
+}
+.container-name-section {
+  display: flex;
+  flex-direction: row;
+  gap: 7%;
+}
+.name-section input {
+  all: unset;
+  border: 1px solid #b6b6b6;
+  border-radius: 4px;
+  padding: 5px;
+  margin-top: 2px;
+  font-size: 0.8rem;
+  padding: 8px;
+  margin-top: 4px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  /* width: 40%; */
+}
+.name-section input::placeholder {
+  font-size: 10px;
+  opacity: 50%;
+  padding-left: 0px;
+}
+.name-section {
+  margin: 7px;
+}
+.name-section label {
+  all: unset;
+  display: flex;
+  flex-direction: column;
+  font-size: 0.8rem;
+  color: rgb(33, 33, 33);
+}
+
+.heading-add {
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.lable-add-section {
+  border-bottom: 1px solid gray;
+  margin: 5px;
+  display: flex;
+  /* border: 1px solid black; */
+  /* width: 22%; */
+  /* justify-content: space-around; */
+  gap: 2px;
+}
+.lable-add-section label {
+  /* all: unset; */
+  border-right: 1px dotted black;
+  padding: 6px;
+  font-size: 13px;
+  width: 90px;
+  text-align: center;
+  /* color: rgb(33, 33, 33); */
+}
+.lable-add-section label:hover {
+  cursor: pointer;
+}
+
+.criteria-input-section {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+.criteria-input-section label {
+  all: unset;
+  font-size: 0.8rem;
+  margin-bottom: -5px;
+  color: rgb(33, 33, 33);
+  margin-bottom: 2px;
+}
+.criteria-input-section select {
+  border: 1px solid #b6b6b6;
+  /* width: 14%; */
+  border-radius: 3px;
+  padding: 6px;
+  margin-top: 6px;
+  color: rgb(59, 59, 59);
+  font-size: 12px;
+}
+.leave-credit-on {
+  display: flex;
+  justify-content: start;
+}
+.credit-button-section {
+  margin-left: 1%;
+  height: auto;
+  /* border: 1px solid black; */
+}
+.credit-button-container {
+  display: flex;
+  gap: 26%;
+  /* border: 1px solid black; */
+  margin-top: 10px;
+}
+.credit select {
+  font-size: 12px;
+  border: 1px solid #b6b6b6;
+  width: 14%;
+  padding: 3px;
+  border-radius: 3px;
+  margin-left: -1px;
+  color: #585858;
+}
+.credit {
+  margin-left: -1px;
+}
+.container-new-joinee {
+  display: flex;
+  gap: 5px;
+}
+.container-new-joinee label {
+  font-size: 0.8rem;
+  color: rgb(33, 33, 33);
+  margin-bottom: 0px;
+}
+#new-joinee {
+  width: 13px;
+}
+.leave-credit-on {
+  /* display: flex; */
+  gap: 10px;
+  margin-top: 12px;
+  /* border: 1px solid black; */
+}
+.leave-credit-input {
+  width: 12px;
+}
+.leave-credit-on label {
+  font-size: 13px;
+  margin-bottom: 0px;
+  color: rgb(33, 33, 33);
+  width: 100%;
+}
+
+.main-container-leve-no-days {
+  display: flex;
+  gap: 16.8%;
+  margin-bottom: 15px;
+  margin-top: 18px;
+}
+
+.no-of-days input[type="text"] {
+  all: unset;
+  border: 1px solid #b6b6b6;
+  width: 49%;
+  border-radius: 4px;
+  padding: 4px;
+}
+.no-of-days input[type="text"]::placeholder {
+  font-size: 11px;
+  color: #a2a2a2;
+}
+.no-of-days label {
+  font-size: 0.8rem;
+  color: rgb(33, 33, 33);
+  margin-bottom: 5px;
+}
+/* table leveas */
+
+.table-wrapper {
+  border-radius: 8px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  border: 1px solid #d9e3d9;
+  background-color: white;
+  height: 380px;
+}
+.table-wrapper::-webkit-scrollbar {
+  display: none;
+}
+.table-row,
+.table-header-leaves {
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr 2fr 2fr 2fr 1fr;
+  padding: 7px;
+  height: 31px;
+  font-size: 0.7rem;
+  text-align: center;
+}
+
+.table-header-leaves {
+  background-color: #d8f3d8;
+  font-weight: bold;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.table-row button {
+  font-size: 0.7rem;
+}
+.input-container-form {
+  box-sizing: border-box;
+  /* border: 1px solid black; */
+}
+.leaves-action-buttons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 5px;
+}
+
+/* new joinee table */
+.table-header-sections {
+  display: grid;
+  grid-template-columns: 2fr 2fr 2fr 2fr;
+  padding: 4px;
+  height: 20px;
+  font-size: 0.7rem;
+  text-align: center;
+  background-color: #d8f3d8;
+  width: 100%;
+  /* margin: 0px; */
+  font-weight: 600;
+  border-radius: 4px;
+}
+
+/* Encshment css */
+.encashment-button-section {
+  /* border: 1px solid black; */
+  height: auto;
+  width: 100%;
+  display: flex;
+  gap: 10%;
+}
+.checked-section {
+  /* border: 1px solid black; */
+
+  height: auto;
+  width: 15%;
+}
+.encash-input-section {
+  /* border: 1px solid black; */
+
+  height: auto;
+
+  width: 30%;
+}
+
+/* Applicability */
+
+.criteria-table-sections {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 4px;
+  height: 20px;
+  font-size: 0.7rem;
+  text-align: center;
+  background-color: #d8f3d8;
+  width: 100%;
+  margin-top: 5px;
+  font-weight: 600;
+}
+
+.criteria-row {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 18%;
+  font-size: 0.7rem;
+  /* margin-top: 6px; */
+  border-bottom: 1px solid rgb(170, 170, 170);
+  margin: 5px 0px 9px;
+}
+
+.view-icon {
+  color: #84c7ae;
+  height: 18px;
+  width: 15px;
+}
+.back-icon {
+  /* margin-top: 10px; */
+  height: 12px;
+}
+
+.criteria-input-section option {
+  font-size: 12px;
+  color: rgb(66, 66, 66);
+}
+
+.container-table {
+  border: 1px solid rgb(119, 119, 119);
+  margin-top: 8px;
+  border-radius: 4px;
+  width: 45%;
+}
+
+.activeclass {
+  color: white;
+  background-color: rgb(132, 199, 174);
+}
+.non-active {
+  color: black;
+}
+.save-button-div {
+  width: 20%;
+  height: 40px;
+
+  margin: 20px 0px 0px 10px;
+}
+
+.leave-view-edit-delete {
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.leave-credit-on {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+  margin-top: 50px;
+}
+
+.tooltip-label {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.tooltip-text {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  bottom: 125%; /* adjust as needed */
+  left: 0;
+  width: 240px;
+  background-color: #444;
+  color: #fff;
+  padding: 8px;
+  border-radius: 6px;
+  z-index: 10;
+  transition: opacity 0.3s;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+}
+
+.tooltip-text::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 10px;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #444 transparent transparent transparent;
+}
+
+.tooltip-label:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+.attendance-percentage-section input {
+  width: 63%;
+}
+
+/* Default: Mobile-first styles (below 768px) */
+/* Keep your base styles here */
+
+/* Tablets: 768px to 1024px */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .define-leave-main,
+  .form-section-add-leave,
+  .input-container-form {
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+  }
+
+  .heading-add {
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .heading-add button {
+    all: unset;
+    color: white;
+    background-color: #75b39d;
+    width: 80px;
+    height: 24px;
+    text-align: center;
+    border-radius: 4px;
+  }
+
+  .container-name-section {
+    display: flex;
+    flex-direction: row;
+    gap: 7%;
+  }
+
+  .name-section {
+    margin: 7px;
+  }
+
+  .name-section label {
+    all: unset;
+    display: flex;
+    flex-direction: column;
+    font-size: 0.8rem;
+    color: #212121;
+  }
+
+  .name-section input {
+    all: unset;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 8px;
+    margin-top: 4px;
+    font-size: 0.8rem;
+  }
+
+  .lable-add-section {
+    display: flex;
+    border-bottom: 1px solid gray;
+    margin: 5px;
+    gap: 2px;
+  }
+
+  .lable-add-section label {
+    border-right: 1px dotted black;
+    padding: 6px;
+    font-size: 13px;
+    width: 90px;
+    text-align: center;
+  }
+
+  .credit-button-section {
+    margin-left: 1%;
+  }
+
+  .credit-button-container {
+    display: flex;
+    gap: 26%;
+    margin-top: 10px;
+  }
+
+  .criteria-input-section {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+  }
+
+  .main-container-leve-no-days {
+    display: flex;
+    gap: 16.8%;
+    margin: 18px 0 15px;
+  }
+
+  .leave-credit-on {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 30px;
+  }
+
+  .no-of-days {
+    margin-left: -4px;
+  }
+  .encashment-button-section {
+    /* border: 1px solid black; */
+    height: auto;
+    width: 100%;
+    display: flex;
+    gap: 10%;
+  }
+  .checked-section {
+    /* border: 1px solid black; */
+    height: auto;
+    width: 23%;
+  }
+}
+
+/* 768px exact fix (e.g., some edge cases on tablets) */
+@media screen and (width: 768px) {
+  .no-of-days {
+    margin-left: -32px;
+  }
+}
+
+/* Small Desktops: 1025px to 1439px */
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+  /* You can inherit most styles from tablet if they work fine */
+  /* Only override differences here */
+  .leave-credit-on {
+    margin-top: 15px;
+  }
+  .credit-button-container {
+    gap: 30%;
+  }
+
+  .main-container-leve-no-days {
+    gap: 18%;
+  }
+
+  .no-of-days {
+    margin-left: 35px;
+  }
+}
